@@ -1,2 +1,3 @@
 # Why
-I dont understand, "private" mean cost fee? WTF github
+Book Store clone Honto.jp
+
