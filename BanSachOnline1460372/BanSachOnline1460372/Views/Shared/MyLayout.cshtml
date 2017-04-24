@@ -26,17 +26,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+
     <title>Ban Sach Online</title>
+    
     <!-- Bootstrap Core CSS -->
-    <link href="~/content/bootstrap.min.css" rel="stylesheet">
+    <!--link href="~/Content/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="~/content/BanSachOnline.css" rel="stylesheet">
+    <!--link href="~/Content/BanSachOnline.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <![endif]-->  
+        
+    <!--root-->
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/bootstrap.css">
+    
+    <!--lib-->
+    <link rel="stylesheet" href="~/Content/lib/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/Content/lib/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/lib/css/shop-homepage.css" />
+    
+    <script src="~/Content/lib/js/bootstrap.js"></script>
+    <script src="~/Content/lib/js/bootstrap.min.js"></script>
+    <script src="~/Content/lib/js/jquery.js"></script>
+
+    <!--out-->
+    <link rel="stylesheet" href="~/Content/lib/out/bootstrap.min.css" />
+    <script src="~/Content/lib/out/bootstrap.min.js"></script>
+    <script src="~/Content/lib/out/jquery.min.js"></script>
+
 </head>
 <body>
     <!-- Navigation -->
@@ -50,26 +71,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                @Html.ActionLink("Ban Sach Online", "Index", "Home", null, new { @class = "navbar-brand" })
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
+
                     <li>
-                        <a href="#">About</a>
+                        @Html.ActionLink("Danh Sach", "List")
                     </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
+
     <!-- Page Content -->
     @RenderBody()
 
@@ -85,10 +103,12 @@
             </div>
         </footer>
     </div>
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>
 

@@ -124,21 +124,71 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ChiTiet.cs" />
+    <Compile Include="Models\DanhSach.cs" />
+    <Compile Include="Models\Generated\Database.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PetaPoco.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Image\Book\Banner\b001.png" />
+    <Content Include="Content\Image\Book\Banner\b002.png" />
+    <Content Include="Content\Image\Book\Cover\c001.png" />
+    <Content Include="Content\Image\Book\Cover\c001001.png" />
+    <Content Include="Content\Image\Book\Cover\c001002.png" />
+    <Content Include="Content\Image\Book\Cover\c001003.png" />
+    <Content Include="Content\Image\Book\Cover\c001004.png" />
+    <Content Include="Content\Image\Book\Cover\c001005.png" />
+    <Content Include="Content\Image\Book\Cover\c001006.png" />
+    <Content Include="Content\Image\Book\Cover\c001007.png" />
+    <Content Include="Content\Image\Book\Cover\c001008.png" />
+    <Content Include="Content\Image\Book\Cover\c001009.png" />
+    <Content Include="Content\Image\Book\Cover\c001010.png" />
+    <Content Include="Content\Image\Book\Cover\c001011.png" />
+    <Content Include="Content\Image\Book\Cover\c001012.png" />
+    <Content Include="Content\Image\Book\Cover\c001013.png" />
+    <Content Include="Content\Image\Book\Cover\c001014.png" />
+    <Content Include="Content\Image\Book\Cover\c002.png" />
+    <Content Include="Content\Image\Book\Cover\c002001.png" />
+    <Content Include="Content\Image\Book\Cover\c002002.png" />
+    <Content Include="Content\Image\Book\Cover\c002003.png" />
+    <Content Include="Content\Image\Book\Cover\c002004.png" />
+    <Content Include="Content\Image\Book\Cover\c002005.png" />
+    <Content Include="Content\Image\Book\Cover\c002006.png" />
+    <Content Include="Content\Image\Book\Cover\c002007.png" />
+    <Content Include="Content\Image\Book\Cover\c002008.png" />
+    <Content Include="Content\Image\Book\Cover\c002009.png" />
+    <Content Include="Content\lib\css\4-col-portfolio.css" />
+    <Content Include="Content\lib\css\bootstrap.css" />
+    <Content Include="Content\lib\css\bootstrap.min.css" />
+    <Content Include="Content\lib\css\shop-homepage.css" />
+    <Content Include="Content\lib\js\bootstrap.js" />
+    <Content Include="Content\lib\js\bootstrap.min.js" />
+    <Content Include="Content\lib\js\jquery.js" />
+    <Content Include="Content\lib\out\bootstrap.min.css" />
+    <Content Include="Content\lib\out\bootstrap.min.js" />
+    <Content Include="Content\lib\out\jquery.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Generated\Database.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Database.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Models\Generated\PetaPoco.Generator.ttinclude" />
+    <Content Include="Models\Generated\PetaPoco.Core.ttinclude" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -146,8 +196,14 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -158,22 +214,27 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\MyLayout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Home\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Content\old\" />
+    <Folder Include="Controllers\old\" />
+    <Folder Include="fonts\old\" />
+    <Folder Include="Views\old\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
