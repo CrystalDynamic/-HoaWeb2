@@ -11,19 +11,33 @@ namespace BanSachOnline1460372.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            var ds = BanSachOnline1460372.Models.DanhSach.ds();
-            return View(ds);
+            //var ds = BanSachOnline1460372.Models.DanhSach.ds();
+            return View();
+        }
+                
+
+        public ActionResult List(int page=1)
+        {            
+            return View(BanSachOnline1460372.Models.DanhSach.ds(page, 8));
         }
 
-        public ActionResult List()
+        public ActionResult Author(int id, int page=1)
         {
-            var ds = BanSachOnline1460372.Models.DanhSach.ds();
-            return View(ds);
+            return View(BanSachOnline1460372.Models.SachCuaTacGia.SCTG(id, page, 4));
+        }
+
+        public ActionResult Genre(int id, int page=1)
+        {
+            return View(BanSachOnline1460372.Models.SachCuaTheLoai.SCTL(id, page, 4));
         }
 
         // GET: Home/Details/5
         public ActionResult Details(int id)
         {
+            //var ct = BanSachOnline1460372.Models.ChiTiet.ct(id);
+            //var tg = BanSachOnline1460372.Models.ShowModel.TacGiaCuaSach.Get(ct.recID);
+            //return View(new BanSachOnline1460372.Models.ShowModel.SachShowModel() { Sach = ct, TacGia = tg });
+            
             return View(BanSachOnline1460372.Models.ChiTiet.ct(id));
         }
 

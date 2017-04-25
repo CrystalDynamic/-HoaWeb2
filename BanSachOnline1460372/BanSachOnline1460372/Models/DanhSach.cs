@@ -12,5 +12,11 @@ namespace BanSachOnline1460372.Models
             var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB();
             return db.Query<BanSachOnlineConnection.Sach>("select * from Sach");
         }
+
+        public static PetaPoco.Page<BanSachOnlineConnection.Sach> ds(int pageNum, int itemPer)
+        {
+            var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB();
+            return db.Page<BanSachOnlineConnection.Sach>(pageNum, itemPer, "select * from Sach");
+        }
     }
 }

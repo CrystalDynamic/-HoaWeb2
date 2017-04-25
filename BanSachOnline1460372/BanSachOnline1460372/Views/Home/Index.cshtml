@@ -1,95 +1,73 @@
-﻿@model IEnumerable<BanSachOnlineConnection.Sach>
+﻿
 
 @{
     ViewBag.Title = "Index";
 }
 
+<div class="row">
 
+    <div class="col-md-3">              
+        <p class="lead">Menu</p>
+        <div class="navbar-default sidebar" role="navigation">                        
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    @Html.Partial("TheLoai", BanSachOnline1460372.Models.TheLoai.genre())
+                    @Html.Partial("TacGia", BanSachOnline1460372.Models.TacGia.author())
+                </ul>               
+            </div>            
+        </div>        
+    </div>
 
+    <div class="col-md-9">
 
-<div class="container">
-    <div class="row">
+        <div class="row carousel-holder">
+            <div class="col-md-12">
 
-        <div class="col-md-3">
-            <p class="lead">Shop Name</p>
-            <div class="list-group">
-                <a href="#" class="list-group-item">Category 1</a>
-                <a href="#" class="list-group-item">Category 2</a>
-                <a href="#" class="list-group-item">Category 3</a>
-            </div>
-        </div>
+                <div id="carousel-banner" class="carousel slide" data-ride="carousel">
 
+                    <ol class="carousel-indicators">
 
-        <div class="col-md-9">
+                        <li data-target="#carousel-banner" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-banner" data-slide-to="1"></li>
 
-            <div class="row carousel-holder">
-                <div class="col-md-12">
+                    </ol>
 
-                    <div id="carousel-banner" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
 
-                        <ol class="carousel-indicators">
-
-                            <li data-target="#carousel-banner" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-banner" data-slide-to="1"></li>
-                            
-                        </ol>
-
-                        <div class="carousel-inner">
-                            
-                            <div class="item active">
-                                <img class="slide-image" src="~/Content/Image/Book/Banner/b001.png" alt="">
-                            </div>
-                            <div class="item">
-                                <img class="slide-image" src="~/Content/Image/Book/Banner/b002.png" alt="">
-                            </div>
-                            
+                        <div class="item active">
+                            <a href='@Url.Action("Author", "Home", new { id = 1 })'>
+                                <img class="slide-image" src="~/Content/Image/Book/Banner/b001.png" />
+                            </a>
                         </div>
-
-                        <a class="left carousel-control" href="#carousel-banner" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                        </a>
-                        <a class="right carousel-control" href="#carousel-banner" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                        </a>
+                        <div class="item">                            
+                            <a  href='@Url.Action("Author", "Home", new { id = 2 })'>
+                                <img class="slide-image" src="~/Content/Image/Book/Banner/b002.png" />
+                            </a>
+                        </div>
 
                     </div>
 
-
+                    <a class="left carousel-control" href="#carousel-banner" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-banner" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
 
                 </div>
-            </div>
 
 
-
-            <div class="row">
-                
-                @foreach (var item in Model.Take(6))
-                {
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-
-                            <a href='@Url.Action("Details", "Home", new { id = item.recID })'>
-                                <img src='@Url.Content(@item.TrangBia)' />
-                            </a>
-                            
-                            <div class="caption">
-
-                                <h4 class="pull-right">$@item.Gia</h4>
-                                <h4>
-                                    <a>@Html.ActionLink(item.Ten, "Details", new { id = item.recID })</a>
-                                </h4>
-
-                                <p>@item.NoiDung</p>
-                              
-                            </div>
-                           
-                        </div>
-                    </div>
-                }
 
             </div>
         </div>
+
+        @Html.Partial("DanhSach", BanSachOnline1460372.Models.DanhSach.ds())
+
     </div>
+
 </div>
+
+
+
 
 

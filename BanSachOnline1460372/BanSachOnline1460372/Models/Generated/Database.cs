@@ -27,7 +27,7 @@
 //     Provider:               `System.Data.SqlClient`
 //     Connection String:      `Data Source=YURIHONJO\HONTO;Initial Catalog=BanSachOnline;User ID=sa;Password=wendy`
 //     Schema:                 ``
-//     Include Views:          `False`
+//     Include Views:          `True`
 
 
 
@@ -616,7 +616,7 @@ namespace BanSachOnlineConnection
 
 
 
-	[PrimaryKey("ID_Sach", AutoIncrement=false)]
+	[PrimaryKey("ID_Series", AutoIncrement=false)]
 
 
 	[ExplicitColumns]
@@ -626,7 +626,7 @@ namespace BanSachOnlineConnection
 
 
 
-		[Column] public int ID_Sach { get; set; }
+		[Column] public int ID_Series { get; set; }
 
 
 
