@@ -9,7 +9,8 @@ namespace BanSachOnline_1460372.Models.ShowModel
     {
         public BanSachOnlineConnection.Sach Sach { get; set; }
         public BanSachOnlineConnection.TacGium TacGia { get; set; }
-        public BanSachOnlineConnection.TheLoai TheLoai { get; set; }
+        public IEnumerable<BanSachOnlineConnection.TheLoai> TheLoai { get; set; }
         public BanSachOnlineConnection.Series Series { get; set; }
+        public BanSachOnlineConnection.NhaXuatBan NhaXuatBan { get; set; }
     }
 }

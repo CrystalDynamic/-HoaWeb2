@@ -8,6 +8,8 @@ namespace BanSachOnline_1460372.Controllers
 {    
     public class ProductController : Controller
     {
+        int itemPerPage = 8;
+
         // GET: Product
         public ActionResult Index()
         {
@@ -15,19 +17,29 @@ namespace BanSachOnline_1460372.Controllers
             return View();
         }
 
-        public ActionResult List(int page = 1)
+        public ActionResult List(int page = 1)        
         {
-            return View(BanSachOnline_1460372.Models.Sach.get(page, 8));
+            return View(BanSachOnline_1460372.Models.Sach.get(page, 12));
         }
 
         public ActionResult Author(int id, int page = 1)
         {
-            return View(BanSachOnline_1460372.Models.SachCuaTacGia.get(id, page, 8));
+            return View(BanSachOnline_1460372.Models.SachCuaTacGia.get(id, page, itemPerPage));
         }
 
         public ActionResult Genre(int id, int page = 1)
         {
-            return View(BanSachOnline_1460372.Models.SachCuaTheLoai.get(id, page, 8));
+            return View(BanSachOnline_1460372.Models.SachCuaTheLoai.get(id, page, itemPerPage));
+        }
+
+        public ActionResult Series(int id, int page = 1)
+        {
+            return View(BanSachOnline_1460372.Models.SachCuaSeries.get(id, page, itemPerPage));
+        }
+
+        public ActionResult Publisher(int id, int page = 1)
+        {
+            return View(BanSachOnline_1460372.Models.SachCuaNhaXuatBan.get(id, page, itemPerPage));
         }
 
         // GET: Home/Details/5
@@ -37,18 +49,20 @@ namespace BanSachOnline_1460372.Controllers
         //    return View(BanSachOnline_1460372.Models.ChiTiet.get(id));
         //}
 
-
-
         public ActionResult Details(int id)
         {
             var sach = BanSachOnline_1460372.Models.ChiTiet.get(id);
+
             var tacgia = BanSachOnline_1460372.Models.ShowModel.TacGiaCuaSach.get(sach.ID_Sach);
             var theloai = BanSachOnline_1460372.Models.ShowModel.TheLoaiCuaSach.get(sach.ID_Sach);
+            var nxb = BanSachOnline_1460372.Models.ShowModel.NhaXuatBanCuaSach.get(sach.ID_Sach);
 
-            return View(new BanSachOnline_1460372.Models.ShowModel.SachShowModel() { Sach = sach, TacGia = tacgia, TheLoai = theloai });
+
+
+            return View(new BanSachOnline_1460372.Models.ShowModel.SachShowModel()
+                { Sach = sach, TacGia = tacgia, TheLoai = theloai, NhaXuatBan = nxb });
         }
-
-
+                
         // GET: Product/Create
         public ActionResult Create()
         {

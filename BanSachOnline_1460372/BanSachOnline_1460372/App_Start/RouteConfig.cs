@@ -12,9 +12,9 @@ namespace BanSachOnline_1460372
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+                        
             routes.MapRoute(
-               name: "Home",
+               name: "HontoBookStore",
                url: "{controller}/{action}/{id}",
                defaults: new { controller = "Product", action = "Index", id = UrlParameter.Optional }
            );

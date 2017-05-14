@@ -81,8 +81,12 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                        @Html.Partial("TheLoai", BanSachOnline_1460372.Models.TheLoai.get())
-                        @Html.Partial("TacGia", BanSachOnline_1460372.Models.TacGia.get())
+                        @*@Html.Partial("TheLoai", BanSachOnline_1460372.Models.TheLoai.get())
+                        @Html.Partial("TacGia", BanSachOnline_1460372.Models.TacGia.get())*@
+
+                        @Html.Action("Author_Menu", "Menu")
+                        @Html.Action("Genre_Menu", "Menu")
+                        @Html.Action("Publisher_Menu", "Menu")
                     </ul>
                 </div>
             </div>

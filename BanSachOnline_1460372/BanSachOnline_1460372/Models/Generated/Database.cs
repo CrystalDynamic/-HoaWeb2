@@ -136,6 +136,266 @@ namespace BanSachOnlineConnection
 
     
 
+	[TableName("dbo.__MigrationHistory")]
+
+
+
+	[PrimaryKey("MigrationId", AutoIncrement=false)]
+
+
+	[ExplicitColumns]
+
+    public partial class __MigrationHistory : BanSachOnlineConnectionDB.Record<__MigrationHistory>  
+    {
+
+
+
+		[Column] public string MigrationId { get; set; }
+
+
+
+
+
+		[Column] public string ContextKey { get; set; }
+
+
+
+
+
+		[Column] public byte[] Model { get; set; }
+
+
+
+
+
+		[Column] public string ProductVersion { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.AspNetRoles")]
+
+
+
+	[PrimaryKey("Id", AutoIncrement=false)]
+
+
+	[ExplicitColumns]
+
+    public partial class AspNetRole : BanSachOnlineConnectionDB.Record<AspNetRole>  
+    {
+
+
+
+		[Column] public string Id { get; set; }
+
+
+
+
+
+		[Column] public string Name { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.AspNetUserClaims")]
+
+
+
+	[PrimaryKey("Id")]
+
+
+
+
+	[ExplicitColumns]
+
+    public partial class AspNetUserClaim : BanSachOnlineConnectionDB.Record<AspNetUserClaim>  
+    {
+
+
+
+		[Column] public int Id { get; set; }
+
+
+
+
+
+		[Column] public string UserId { get; set; }
+
+
+
+
+
+		[Column] public string ClaimType { get; set; }
+
+
+
+
+
+		[Column] public string ClaimValue { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.AspNetUserLogins")]
+
+
+
+	[PrimaryKey("LoginProvider", AutoIncrement=false)]
+
+
+	[ExplicitColumns]
+
+    public partial class AspNetUserLogin : BanSachOnlineConnectionDB.Record<AspNetUserLogin>  
+    {
+
+
+
+		[Column] public string LoginProvider { get; set; }
+
+
+
+
+
+		[Column] public string ProviderKey { get; set; }
+
+
+
+
+
+		[Column] public string UserId { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.AspNetUserRoles")]
+
+
+
+	[PrimaryKey("UserId", AutoIncrement=false)]
+
+
+	[ExplicitColumns]
+
+    public partial class AspNetUserRole : BanSachOnlineConnectionDB.Record<AspNetUserRole>  
+    {
+
+
+
+		[Column] public string UserId { get; set; }
+
+
+
+
+
+		[Column] public string RoleId { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.AspNetUsers")]
+
+
+
+	[PrimaryKey("Id", AutoIncrement=false)]
+
+
+	[ExplicitColumns]
+
+    public partial class AspNetUser : BanSachOnlineConnectionDB.Record<AspNetUser>  
+    {
+
+
+
+		[Column] public string Id { get; set; }
+
+
+
+
+
+		[Column] public string Email { get; set; }
+
+
+
+
+
+		[Column] public bool EmailConfirmed { get; set; }
+
+
+
+
+
+		[Column] public string PasswordHash { get; set; }
+
+
+
+
+
+		[Column] public string SecurityStamp { get; set; }
+
+
+
+
+
+		[Column] public string PhoneNumber { get; set; }
+
+
+
+
+
+		[Column] public bool PhoneNumberConfirmed { get; set; }
+
+
+
+
+
+		[Column] public bool TwoFactorEnabled { get; set; }
+
+
+
+
+
+		[Column] public DateTime? LockoutEndDateUtc { get; set; }
+
+
+
+
+
+		[Column] public bool LockoutEnabled { get; set; }
+
+
+
+
+
+		[Column] public int AccessFailedCount { get; set; }
+
+
+
+
+
+		[Column] public string UserName { get; set; }
+
+
+
+	}
+
+    
+
 	[TableName("dbo.BinhLuan")]
 
 
@@ -164,7 +424,7 @@ namespace BanSachOnlineConnection
 
 
 
-		[Column] public int ID_KH { get; set; }
+		[Column] public string ID_KH { get; set; }
 
 
 
@@ -206,7 +466,7 @@ namespace BanSachOnlineConnection
 
 
 
-		[Column] public int ID_KH { get; set; }
+		[Column] public string ID_KH { get; set; }
 
 
 
@@ -340,9 +600,7 @@ namespace BanSachOnlineConnection
 
 
 
-	[PrimaryKey("ID_KhachHang")]
-
-
+	[PrimaryKey("ID_KH", AutoIncrement=false)]
 
 
 	[ExplicitColumns]
@@ -352,7 +610,7 @@ namespace BanSachOnlineConnection
 
 
 
-		[Column] public int ID_KhachHang { get; set; }
+		[Column] public string ID_KH { get; set; }
 
 
 
@@ -377,6 +635,36 @@ namespace BanSachOnlineConnection
 
 
 		[Column] public int? ID_TaiKhoan { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.NhaXuatBan")]
+
+
+
+	[PrimaryKey("ID_NhaXuatBan")]
+
+
+
+
+	[ExplicitColumns]
+
+    public partial class NhaXuatBan : BanSachOnlineConnectionDB.Record<NhaXuatBan>  
+    {
+
+
+
+		[Column] public int ID_NhaXuatBan { get; set; }
+
+
+
+
+
+		[Column] public string Ten_NhaXuatBan { get; set; }
 
 
 
@@ -424,13 +712,13 @@ namespace BanSachOnlineConnection
 
 
 
+		[Column] public int? ID_NhaXuatBan { get; set; }
+
+
+
+
+
 		[Column] public string NoiDung_Sach { get; set; }
-
-
-
-
-
-		[Column] public string NhaXuatBan_Sach { get; set; }
 
 
 
@@ -503,6 +791,66 @@ namespace BanSachOnlineConnection
 
 
 		[Column] public string TrangBia_Series { get; set; }
+
+
+
+
+
+		[Column] public decimal? Gia_Series { get; set; }
+
+
+
+
+
+		[Column] public string NoiDung_Series { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.sysdiagrams")]
+
+
+
+	[PrimaryKey("diagram_id")]
+
+
+
+
+	[ExplicitColumns]
+
+    public partial class sysdiagram : BanSachOnlineConnectionDB.Record<sysdiagram>  
+    {
+
+
+
+		[Column] public string name { get; set; }
+
+
+
+
+
+		[Column] public int principal_id { get; set; }
+
+
+
+
+
+		[Column] public int diagram_id { get; set; }
+
+
+
+
+
+		[Column] public int? version { get; set; }
+
+
+
+
+
+		[Column] public byte[] definition { get; set; }
 
 
 
