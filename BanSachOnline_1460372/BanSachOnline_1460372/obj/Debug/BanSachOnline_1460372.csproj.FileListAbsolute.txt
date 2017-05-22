@@ -1,0 +1,138 @@
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\csc.exe
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\System.Collections.Immutable.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\vbc.exe
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\VBCSCompiler.exe
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\VBCSCompiler.exe.config
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\BanSachOnline_1460372.dll.config
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\BanSachOnline_1460372.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\BanSachOnline_1460372.pdb
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Antlr3.Runtime.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\EntityFramework.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\EntityFramework.SqlServer.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.Google.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Web.Infrastructure.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Newtonsoft.Json.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Owin.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.Helpers.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.Mvc.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.Optimization.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.Razor.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.WebPages.Deployment.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.WebPages.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.WebPages.Razor.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\WebGrease.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.Helpers.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.Mvc.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.Optimization.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.Razor.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.WebPages.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.WebPages.Deployment.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.WebPages.Razor.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Antlr3.Runtime.pdb
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Newtonsoft.Json.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\EntityFramework.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\EntityFramework.SqlServer.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.Google.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\obj\Debug\BanSachOnline_1460372.csprojResolveAssemblyReference.cache
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\obj\Debug\BanSachOnline_1460372.dll
+c:\users\yuri honjo\documents\visual studio 2015\Projects\BanSachOnline_1460372\BanSachOnline_1460372\obj\Debug\BanSachOnline_1460372.pdb
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\csc.exe
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\System.Collections.Immutable.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\System.Reflection.Metadata.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\vbc.exe
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\VBCSCompiler.exe
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\roslyn\VBCSCompiler.exe.config
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\BanSachOnline_1460372.dll.config
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\BanSachOnline_1460372.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\BanSachOnline_1460372.pdb
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Antlr3.Runtime.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\EntityFramework.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\EntityFramework.SqlServer.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.AspNet.Identity.Core.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.Cookies.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.Facebook.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.Google.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.OAuth.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.Twitter.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Web.Infrastructure.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Newtonsoft.Json.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Owin.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.Helpers.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.Mvc.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.Optimization.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.Razor.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.WebPages.Deployment.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.WebPages.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.WebPages.Razor.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\WebGrease.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.Helpers.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.Mvc.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.Optimization.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.Razor.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.WebPages.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.WebPages.Deployment.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\System.Web.WebPages.Razor.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Antlr3.Runtime.pdb
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Newtonsoft.Json.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\EntityFramework.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\EntityFramework.SqlServer.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.AspNet.Identity.Core.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.Facebook.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.Cookies.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.OAuth.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.Google.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.Twitter.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\obj\Debug\BanSachOnline_1460372.csprojResolveAssemblyReference.cache
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\obj\Debug\BanSachOnline_1460372.dll
+C:\repos\BookStore\BanSachOnline_1460372\BanSachOnline_1460372\obj\Debug\BanSachOnline_1460372.pdb
