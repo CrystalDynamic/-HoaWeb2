@@ -1,0 +1,109 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Do an web 2 cuoi ki">
+    <meta name="author" content="1460372 - Tran Xuan Hoa">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/sbadmin2/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- MetisMenu CSS -->
+    <link href="~/Content/sbadmin2/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="~/Content/sbadmin2/dist/css/sb-admin-2.css" rel="stylesheet">
+    <!-- Morris Charts CSS -->
+    <link href="~/Content/sbadmin2/vendor/morrisjs/morris.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="~/Content/sbadmin2/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        
+    @*<link href="~/Content/my_css/wtf.css" rel="stylesheet">*@
+
+    <link href="~/Content/product_card/css/style.css" rel="stylesheet">
+    
+    <title>Chao Mung Den Voi Ban Sach Online</title>
+</head>
+<body>
+    <div id="wrapper">        
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Ban Sach Online", "Index", "Product", null, new { @class = "navbar-brand" })                
+            </div> 
+
+            <ul class="nav navbar-top-links navbar-right">
+                @*@Html.Partial("_LoginPartial")*@
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-windows fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>                  
+                            @Html.ActionLink("Danh Sach", "List", "Product")
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            @Html.ActionLink("Trang Admin", "Index", "Admin")
+                        </li>
+                        @*<li>
+                            <a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    </li>*@
+                    </ul>
+                </li>
+            </ul>            
+            
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">                                                                      
+                        @Html.Action("Search_Menu", "Menu")
+                        @*@Html.Action("List_Menu", "Menu")*@
+                        @Html.Action("Author_Menu", "Menu")
+                        @Html.Action("Publisher_Menu", "Menu")
+                        @Html.Action("Genre_Menu", "Menu")
+                        @Html.Action("Series_Menu", "Menu")
+                        @Html.Action("AvailableShippingDate_Menu", "Menu")                                             
+                    </ul>
+                </div>                
+            </div>
+        </nav>
+        
+        <div id="page-wrapper">
+            @RenderBody()
+        </div>
+        
+    </div>
+
+    <!-- jQuery -->
+    <script src="~/Content/sbadmin2/vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Content/sbadmin2/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="~/Content/sbadmin2/vendor/metisMenu/metisMenu.min.js"></script>
+    <!-- Morris Charts JavaScript -->
+    <script src="~/Content/sbadmin2/vendor/raphael/raphael.min.js"></script>
+    <script src="~/Content/sbadmin2/vendor/morrisjs/morris.min.js"></script>
+    <script src="~/Content/sbadmin2/data/morris-data.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="~/Content/sbadmin2/dist/js/sb-admin-2.js"></script>
+
+    <script src="~/Content/product_card/js/index.js"></script>    
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
