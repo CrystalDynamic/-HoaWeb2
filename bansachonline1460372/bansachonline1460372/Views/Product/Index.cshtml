@@ -4,131 +4,69 @@
     ViewBag.Title = "Index";
 }
 
-@*@foreach (var item in Model)
-{
-    <a href='@Url.Action("Series", "Product", new { id = item.ID_Series })'>
-        <img src='@Url.Content(@item.TrangBia_Series)' />
-    </a>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row carousel-holder">
+            <div id="carousel-banner" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-banner" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-banner" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <a href='@Url.Action("Series", "Product", new { id = 1 })'>
+                            <img class="slide-image" src="~/Content/Image/Book/Banner/b001.png" />
+                        </a>
+                    </div>
+                    
+                    <div class="item">
+                        <a href='@Url.Action("Series", "Product", new { id = 2 })'>
+                            <img class="slide-image" src="~/Content/Image/Book/Banner/b002.png" />
+                        </a>
+                    </div>
 
-    <div class="caption">
-        <h4 class="pull-right">$@item.Gia_Series</h4>
-        <h4>
-            <a>@Html.ActionLink(item.Ten_Series, "Series", "Product", new { id = item.ID_Series }, null)</a>
-        </h4>
-        <p>@item.NoiDung_Series</p>
+                    @*@foreach (var item in Model.Take(1))
+                    {
+                        <a href='@Url.Action("Author", "Product", new { id = item.ID_Series })'>
+                            <img class="slide-image" src="@Url.Content(@item.Banner_Series)" />
+                        </a>
+                    }*@
+                </div>
+                <a class="left carousel-control" href="#carousel-banner" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-banner" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+
     </div>
-}*@
+</div>
 
-@*@foreach (var item in Model)
-{
-    <div id="make-3D-space">
-        <div id="product-card">
-            <div id="product-front">
-                <div class="shadow"></div>
+<div class="row">
+    @*@foreach (var item in Model.Take(6))*@
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+
                 <a href='@Url.Action("Series", "Product", new { id = item.ID_Series })'>
                     <img src='@Url.Content(@item.TrangBia_Series)' />
                 </a>
-                <div class="image_overlay"></div>
-                <div id="view_details">Xem chi tiet</div>
-                <div class="stats">
-                    <div class="stats-container">
-                        <span class="product_price">$@item.Gia_Series</span>
-                        <span class="product_name">@Html.ActionLink(item.Ten_Series, "Series", "Product", new { id = item.ID_Series }, null)</span>
-                        <p>@item.NoiDung_Series</p>
 
-                        @*<div class="product-options">
-                            <strong>SIZES</strong>
-                            <span>XS, S, M, L, XL, XXL</span>
-                            <strong>COLORS</strong>
-                            <div class="colors">
-                                <div class="c-blue"><span></span></div>
-                                <div class="c-red"><span></span></div>
-                                <div class="c-white"><span></span></div>
-                                <div class="c-green"><span></span></div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="caption">
+                    <h4 class="pull-right">$@item.Gia_Series</h4>
+                    <h4>
+                        <a>@Html.ActionLink(item.Ten_Series, "Series", new { id = item.ID_Series })</a>
+                    </h4>
+                    <p>@item.NoiDung_Series</p>
                 </div>
-            </div>
-            <div id="product-back">
-                <div class="shadow"></div>
-                <div id="carousel">
-                    <ul>
-                        <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large.png" alt="" /></li>
-                        <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large2.png" alt="" /></li>
-                        <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large3.png" alt="" /></li>
-                    </ul>
-                    <div class="arrows-perspective">
-                        <div class="carouselPrev">
-                            <div class="y"></div>
-                            <div class="x"></div>
-                        </div>
-                        <div class="carouselNext">
-                            <div class="y"></div>
-                            <div class="x"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="flip-back">
-                    <div id="cy"></div>
-                    <div id="cx"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-}*@
 
-<div id="make-3D-space">
-    <div id="product-card">
-        <div id="product-front">
-            <div class="shadow"></div>
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt.png" alt="" />
-            <div class="image_overlay"></div>
-            <div id="view_details">View details</div>
-            <div class="stats">
-                <div class="stats-container">
-                    <span class="product_price">$39</span>
-                    <span class="product_name">Adidas Originals</span>
-                    <p>Men's running shirt</p>
-
-                    <div class="product-options">
-                        <strong>SIZES</strong>
-                        <span>XS, S, M, L, XL, XXL</span>
-                        <strong>COLORS</strong>
-                        <div class="colors">
-                            <div class="c-blue"><span></span></div>
-                            <div class="c-red"><span></span></div>
-                            <div class="c-white"><span></span></div>
-                            <div class="c-green"><span></span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </div>   
         </div>
-        <div id="product-back">
-            <div class="shadow"></div>
-            <div id="carousel">
-                <ul>
-                    <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large.png" alt="" /></li>
-                    <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large2.png" alt="" /></li>
-                    <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large3.png" alt="" /></li>
-                </ul>
-                <div class="arrows-perspective">
-                    <div class="carouselPrev">
-                        <div class="y"></div>
-                        <div class="x"></div>
-                    </div>
-                    <div class="carouselNext">
-                        <div class="y"></div>
-                        <div class="x"></div>
-                    </div>
-                </div>
-            </div>
-            <div id="flip-back">
-                <div id="cy"></div>
-                <div id="cx"></div>
-            </div>
-        </div>
-    </div>
+    }
 </div>
+
+
 

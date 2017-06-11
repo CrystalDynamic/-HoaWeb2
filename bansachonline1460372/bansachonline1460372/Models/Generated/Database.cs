@@ -468,18 +468,6 @@ namespace BanSachOnlineConnection
 
 
 
-		[Column] public int? SoLuongBinhLuan_Sach { get; set; }
-
-
-
-
-
-		[Column] public int? SoLuongDanhGia_Sach { get; set; }
-
-
-
-
-
 		[Column] public int? BiXoa_Sach { get; set; }
 
 
@@ -542,54 +530,6 @@ namespace BanSachOnlineConnection
 
     
 
-	[TableName("dbo.sysdiagrams")]
-
-
-
-	[PrimaryKey("diagram_id")]
-
-
-
-
-	[ExplicitColumns]
-
-    public partial class sysdiagram : BanSachOnlineConnectionDB.Record<sysdiagram>  
-    {
-
-
-
-		[Column] public string name { get; set; }
-
-
-
-
-
-		[Column] public int principal_id { get; set; }
-
-
-
-
-
-		[Column] public int diagram_id { get; set; }
-
-
-
-
-
-		[Column] public int? version { get; set; }
-
-
-
-
-
-		[Column] public byte[] definition { get; set; }
-
-
-
-	}
-
-    
-
 	[TableName("dbo.TacGia")]
 
 
@@ -640,7 +580,7 @@ namespace BanSachOnlineConnection
 
 
 
-		[Column] public string TenDangNhap_TaiKhoan { get; set; }
+		[Column] public string TenKhachHang_TaiKhoan { get; set; }
 
 
 
@@ -652,19 +592,7 @@ namespace BanSachOnlineConnection
 
 
 
-		[Column] public string Ten_KhachHang { get; set; }
-
-
-
-
-
-		[Column] public string DiaChi_KhachHang { get; set; }
-
-
-
-
-
-		[Column] public string SDT_KhachHang { get; set; }
+		[Column] public string Email_TaiKhoan { get; set; }
 
 
 

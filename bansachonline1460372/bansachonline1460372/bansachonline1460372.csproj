@@ -167,21 +167,43 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ReviewController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\BUS\Cart\Detail\ChiTiet.cs" />
+    <Compile Include="Models\BUS\Cart\Detail\dtoGioHang.cs" />
+    <Compile Include="Models\BUS\Cart\Detail\TaiKhoanCuaGioHang.cs" />
+    <Compile Include="Models\BUS\Cart\GioHang.cs" />
     <Compile Include="Models\BUS\Menu\AvailableShippingDateBus.cs" />
     <Compile Include="Models\BUS\Menu\NhaXuatBanBus.cs" />
     <Compile Include="Models\BUS\Menu\SeriesBus.cs" />
     <Compile Include="Models\BUS\Menu\TacGiaBus.cs" />
     <Compile Include="Models\BUS\Menu\TheLoaiBus.cs" />
+    <Compile Include="Models\BUS\Product\DanhSach.cs" />
+    <Compile Include="Models\BUS\Product\Detail\AvailableShippingDateCuaSach.cs" />
+    <Compile Include="Models\BUS\Product\Detail\ChiTiet.cs" />
+    <Compile Include="Models\BUS\Product\Detail\dtoSach.cs" />
+    <Compile Include="Models\BUS\Product\Detail\NhaXuatBanCuaSach.cs" />
+    <Compile Include="Models\BUS\Product\Detail\SeriesCuaSach.cs" />
+    <Compile Include="Models\BUS\Product\Detail\TacGiaCuaSach.cs" />
+    <Compile Include="Models\BUS\Product\Detail\TheLoaiCuaSach.cs" />
     <Compile Include="Models\BUS\Product\QuangCao.cs" />
+    <Compile Include="Models\BUS\Product\SachCuaGiaoHang.cs" />
+    <Compile Include="Models\BUS\Product\SachCuaNhaXuatBan.cs" />
+    <Compile Include="Models\BUS\Product\SachCuaSeries.cs" />
+    <Compile Include="Models\BUS\Product\SachCuaTacGia.cs" />
+    <Compile Include="Models\BUS\Product\SachCuaTheLoai.cs" />
+    <Compile Include="Models\BUS\Review\BinhLuan.cs" />
     <Compile Include="Models\Generated\Database.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -194,6 +216,8 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Image\Book\Banner\b001.png" />
     <Content Include="Content\Image\Book\Banner\b002.png" />
     <Content Include="Content\Image\Book\Cover\c001.png" />
@@ -242,9 +266,6 @@
     <Content Include="Content\Image\Book\Cover\c006005.png" />
     <Content Include="Content\Image\Book\Cover\c006006.png" />
     <Content Include="Content\Image\Book\Cover\c006007.png" />
-    <Content Include="Content\my_css\wtf.css" />
-    <Content Include="Content\product_card\css\style.css" />
-    <Content Include="Content\product_card\js\index.js" />
     <Content Include="Content\sbadmin2\dist\css\sb-admin-2.css" />
     <Content Include="Content\sbadmin2\dist\css\sb-admin-2.min.css" />
     <Content Include="Content\sbadmin2\dist\js\sb-admin-2.js" />
@@ -338,6 +359,13 @@
     <Content Include="Content\sbadmin2\vendor\morrisjs\morris.min.js" />
     <Content Include="Content\sbadmin2\vendor\raphael\raphael.js" />
     <Content Include="Content\sbadmin2\vendor\raphael\raphael.min.js" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\startbootstrap-shop-homepage-gh-pages\css\bootstrap.css" />
+    <Content Include="Content\startbootstrap-shop-homepage-gh-pages\css\bootstrap.min.css" />
+    <Content Include="Content\startbootstrap-shop-homepage-gh-pages\css\shop-homepage.css" />
+    <Content Include="Content\startbootstrap-shop-homepage-gh-pages\js\bootstrap.js" />
+    <Content Include="Content\startbootstrap-shop-homepage-gh-pages\js\bootstrap.min.js" />
+    <Content Include="Content\startbootstrap-shop-homepage-gh-pages\js\jquery.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -395,6 +423,10 @@
     <Content Include="Content\sbadmin2\vendor\font-awesome\scss\_spinning.scss" />
     <Content Include="Content\sbadmin2\vendor\font-awesome\scss\_stacked.scss" />
     <Content Include="Content\sbadmin2\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_BookStoreLayout_Admin.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -450,9 +482,19 @@
     <Content Include="Views\Menu\AvailableShippingDate_Menu.cshtml" />
     <Content Include="Views\Menu\List_Menu.cshtml" />
     <Content Include="Views\Menu\Search_Menu.cshtml" />
+    <Content Include="Views\Product\Author.cshtml" />
+    <Content Include="Views\Product\Publisher.cshtml" />
+    <Content Include="Views\Product\Genre.cshtml" />
+    <Content Include="Views\Product\Series.cshtml" />
+    <Content Include="Views\Product\AvailableShippingDate.cshtml" />
+    <Content Include="Views\Product\Details.cshtml" />
+    <Content Include="Views\Product\List.cshtml" />
+    <Content Include="Views\Review\Index.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

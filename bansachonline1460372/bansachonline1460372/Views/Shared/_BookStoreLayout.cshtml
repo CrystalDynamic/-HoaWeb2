@@ -23,10 +23,10 @@
     <link href="~/Content/sbadmin2/vendor/morrisjs/morris.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="~/Content/sbadmin2/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        
-    @*<link href="~/Content/my_css/wtf.css" rel="stylesheet">*@
+      
+    <link href="~/Content/startbootstrap-shop-homepage-gh-pages/css/shop-homepage.css" rel="stylesheet">
 
-    <link href="~/Content/product_card/css/style.css" rel="stylesheet">
+    @*<link href="~/Content/bootstrap.css" rel="stylesheet">*@
     
     <title>Chao Mung Den Voi Ban Sach Online</title>
 </head>
@@ -44,10 +44,10 @@
             </div> 
 
             <ul class="nav navbar-top-links navbar-right">
-                @*@Html.Partial("_LoginPartial")*@
+                @Html.Partial("_LoginPartial")
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-windows fa-fw"></i> <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-paw fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-messages">
                         <li>                  
@@ -101,9 +101,7 @@
     <script src="~/Content/sbadmin2/data/morris-data.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="~/Content/sbadmin2/dist/js/sb-admin-2.js"></script>
-
-    <script src="~/Content/product_card/js/index.js"></script>    
-
+    
     @RenderSection("scripts", required: false)
 </body>
 </html>

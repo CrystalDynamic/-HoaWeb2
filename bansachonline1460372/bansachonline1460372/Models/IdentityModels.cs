@@ -21,7 +21,7 @@ namespace bansachonline1460372.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("BanSachOnlineConnection", throwIfV1Schema: false)
         {
         }
 

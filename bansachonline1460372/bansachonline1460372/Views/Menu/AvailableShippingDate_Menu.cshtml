@@ -8,7 +8,7 @@
         @foreach (var item in Model)
         {
             <li>
-                @Html.ActionLink(item.Ten_AvailableShippingDate, "Shipping", "Product", new { id = item.ID_AvailableShippingDate }, null)
+                @Html.ActionLink(item.Ten_AvailableShippingDate, "AvailableShippingDate", "Product", new { id = item.ID_AvailableShippingDate }, null)
             </li>
         }
     </ul>

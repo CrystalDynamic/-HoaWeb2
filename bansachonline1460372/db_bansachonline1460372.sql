@@ -22,8 +22,8 @@ create table Sach
 	Gia_Sach decimal(19,0),
 	TrangBia_Sach varchar(max),
 	ID_AvailableShippingDate int default 1,
-	SoLuongBinhLuan_Sach int default 0,
-	SoLuongDanhGia_Sach int default 0,
+	--SoLuongBinhLuan_Sach int default 0,
+	--SoLuongDanhGia_Sach int default 0,
 	BiXoa_Sach int default 0,
 	primary key (ID_Sach)	
 )
@@ -125,15 +125,12 @@ create table DatHangChiTiet
 create table TaiKhoan
 (
 	ID_TaiKhoan nvarchar(128),
-	TenDangNhap_TaiKhoan varchar(100),
-	MatKhau_TaiKhoan varchar(100),
-	Ten_KhachHang nvarchar(100),
-	DiaChi_KhachHang nvarchar(max),
-	SDT_KhachHang varchar(50),	
+	TenKhachHang_TaiKhoan varchar(256),
+	MatKhau_TaiKhoan varchar(max),
+	Email_TaiKhoan nvarchar(256),
 	BiXoa_TaiKhoan int default 0,
 	primary key(ID_TaiKhoan)
 )
-
 
 alter table Sach
 add constraint FK_TacGiaSach foreign key (ID_TacGia) references TacGia(ID_TacGia),
@@ -146,13 +143,15 @@ add constraint FK_SeriesTheLoai_Sach foreign key (ID_Series) references Series(I
 	constraint FK_TheLoaiTheLoai_Sach foreign key (ID_TheLoai) references TheLoai(ID_TheLoai)
 
 alter table BinhLuan
-add constraint FK_SachBinhLuan foreign key (ID_Sach) references Sach(ID_Sach)	
+add constraint FK_SachBinhLuan foreign key (ID_Sach) references Sach(ID_Sach),
+	constraint FK_ID_TaiKhoanBinhLuan foreign key (ID_TaiKhoan) references TaiKhoan(ID_TaiKhoan)	
 
 alter table GioHang
-add constraint FK_SachGioHang foreign key (ID_Sach) references Sach(ID_Sach)
+add constraint FK_SachGioHang foreign key (ID_Sach) references Sach(ID_Sach),
+	constraint FK_ID_TaiKhoanGioHang foreign key (ID_TaiKhoan) references TaiKhoan(ID_TaiKhoan)
 
 alter table DatHang
-add constraint FK_TinhTrangDatHang foreign key (ID_TinhTrang) references TinhTrang(ID_TinhTrang)
+add constraint FK_TinhTrangDatHang foreign key (ID_TinhTrang) references TinhTrang(ID_TinhTrang)	
 
 alter table DatHangChiTiet
 add constraint FK_DatHangDatHangChiTiet foreign key (ID_DatHang) references DatHang(ID_DatHang),

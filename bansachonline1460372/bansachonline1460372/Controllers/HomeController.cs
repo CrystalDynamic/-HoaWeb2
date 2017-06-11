@@ -16,7 +16,6 @@ namespace bansachonline1460372.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
