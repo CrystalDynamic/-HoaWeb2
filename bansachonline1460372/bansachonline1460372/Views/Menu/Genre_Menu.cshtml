@@ -1,0 +1,15 @@
+﻿@{Layout = null;}
+
+@model IEnumerable<BanSachOnlineConnection.TheLoai>
+
+<li>
+    <a href="#"><i class="fa fa-leaf fa-fw"></i>The Loai<span class="fa arrow"></span></a>
+    <ul class="nav nav-second-level">
+        @foreach (var item in Model)
+        {
+            <li>
+                @Html.ActionLink(item.Ten_TheLoai, "Genre", "Product", new { id = item.ID_TheLoai }, null)
+            </li>
+        }
+    </ul>
+</li>

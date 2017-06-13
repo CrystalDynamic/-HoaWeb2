@@ -1,0 +1,6 @@
+C:\repos\BookStore\bansachonline1460372\DTO\bin\Debug\DTO.dll.config
+C:\repos\BookStore\bansachonline1460372\DTO\bin\Debug\DTO.dll
+C:\repos\BookStore\bansachonline1460372\DTO\bin\Debug\DTO.pdb
+C:\repos\BookStore\bansachonline1460372\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+C:\repos\BookStore\bansachonline1460372\DTO\obj\Debug\DTO.dll
+C:\repos\BookStore\bansachonline1460372\DTO\obj\Debug\DTO.pdb

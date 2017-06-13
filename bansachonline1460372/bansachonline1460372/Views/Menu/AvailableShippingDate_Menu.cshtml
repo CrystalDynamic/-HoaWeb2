@@ -1,0 +1,15 @@
+﻿@{Layout = null;}
+
+@model IEnumerable<BanSachOnlineConnection.AvailableShippingDate>
+
+<li>
+    <a href="#"><i class="fa fa-truck fa-fw"></i>Giao Hang<span class="fa arrow"></span></a>
+    <ul class="nav nav-second-level">
+        @foreach (var item in Model)
+        {
+            <li>
+                @Html.ActionLink(item.Ten_AvailableShippingDate, "AvailableShippingDate", "Product", new { id = item.ID_AvailableShippingDate }, null)
+            </li>
+        }
+    </ul>
+</li>
