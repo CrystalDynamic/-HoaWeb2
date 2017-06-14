@@ -37,12 +37,5 @@ namespace BUS
         {
             return DAO.Sach.get(page, itemPer);
         }
-
-        ///////////////////////////
-
-        public static IEnumerable<BanSachOnlineConnection.BinhLuan> BinhLuan(int ID_Sach)
-        {
-            return DAO.BinhLuan.get(ID_Sach);
-        }
     }
 }

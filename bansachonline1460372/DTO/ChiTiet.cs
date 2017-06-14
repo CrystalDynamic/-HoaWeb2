@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class ChiTietSach
+    public class ChiTiet
     {
         public BanSachOnlineConnection.Sach Sach { get; set; }
         public BanSachOnlineConnection.TacGium TacGia { get; set; }
@@ -14,7 +14,5 @@ namespace DTO
         public BanSachOnlineConnection.Series Series { get; set; }
         public BanSachOnlineConnection.NhaXuatBan NhaXuatBan { get; set; }
         public BanSachOnlineConnection.AvailableShippingDate AvailableShippingDate { get; set; }
-
-        //public ChiTiet() { }
     }
 }
