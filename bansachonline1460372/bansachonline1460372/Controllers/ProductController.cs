@@ -49,7 +49,7 @@ namespace bansachonline1460372.Controllers
         // GET: Product/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(BUS.ChiTiet.Sach(id));
         }
 
         // GET: Product/Create

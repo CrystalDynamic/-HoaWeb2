@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Them.cs" />
+    <Compile Include="ChiTiet.cs" />
     <Compile Include="DanhSach.cs" />
     <Compile Include="DanhSachCua.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
