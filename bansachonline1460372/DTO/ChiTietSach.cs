@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class ChiTiet
+    public class ChiTietSach
     {
         public BanSachOnlineConnection.Sach Sach { get; set; }
         public BanSachOnlineConnection.TacGium TacGia { get; set; }

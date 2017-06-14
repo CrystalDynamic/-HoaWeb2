@@ -1,0 +1,43 @@
+﻿@model IEnumerable<BanSachOnlineConnection.BinhLuan>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+
+<div class="well">
+    <h4>Binh Luan</h4>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div class="form-group">
+            @using (Html.BeginForm("Create", "Review", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                @Html.Hidden("ID_Sach", (int)ViewBag.ID_Sach)
+                @Html.TextArea("NoiDung", new { @class = "form-control", @rows = "3" })
+
+                <br />
+                <div class="text-right">
+                    <input type="submit" class="btn btn-success" value="Dang binh luan" />
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p>vui long <a href="/Account/Login">dang nhap</a> de binh luan</p>
+    }
+    <hr>
+    @foreach (var item in Model)
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <h4>@item.Ten_KhachHang</h4>
+                <span class="pull-right">@item.Ngay_BinhLuan</span>
+                <p>@item.NoiDung_BinhLuan</p>
+            </div>
+        </div>
+        <hr>
+    }
+</div>

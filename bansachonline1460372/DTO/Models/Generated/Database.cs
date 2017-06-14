@@ -468,6 +468,12 @@ namespace BanSachOnlineConnection
 
 
 
+		[Column] public int? LuotXem_Sach { get; set; }
+
+
+
+
+
 		[Column] public int? BiXoa_Sach { get; set; }
 
 

@@ -24,6 +24,7 @@ create table Sach
 	ID_AvailableShippingDate int default 1,
 	--SoLuongBinhLuan_Sach int default 0,
 	--SoLuongDanhGia_Sach int default 0,
+	LuotXem_Sach int default 0,
 	BiXoa_Sach int default 0,
 	primary key (ID_Sach)	
 )
