@@ -48,8 +48,13 @@
 
                     @*@Html.ActionLink("index cart", "Index", "Cart")*@
 
+                    
+
                 </div>
             </div>
+
+            @Html.Action("Index", "Relate", new { ID_Sach = Model.Sach.ID_Sach })
+
         </div>
 
         @*<div class="well">

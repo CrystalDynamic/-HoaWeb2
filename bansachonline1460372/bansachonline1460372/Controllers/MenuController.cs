@@ -42,5 +42,10 @@ namespace bansachonline1460372.Controllers
         {
             return View();
         }
+
+        public ActionResult Search(string keyword)
+        {
+            return View(BUS.DanhSach.TimKiem(keyword));
+        }
     }
 }

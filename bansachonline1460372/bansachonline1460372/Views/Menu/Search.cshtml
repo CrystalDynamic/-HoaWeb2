@@ -1,0 +1,22 @@
+﻿@model IEnumerable<BanSachOnlineConnection.Sach>
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">@Model.Count() ket qua tim kiem</h1>
+    </div>
+</div>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-3 col-md-3 col-xs-2 thumb">
+            <a class="thumbnail" href='@Url.Action("Details", "Product", new { id = item.ID_Sach })'>
+                <img class="img-responsive" src='@Url.Content(@item.TrangBia_Sach)' />
+            </a>
+        </div>
+    }
+</div>

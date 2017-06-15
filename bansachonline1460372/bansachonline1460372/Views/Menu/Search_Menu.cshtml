@@ -6,11 +6,29 @@
 
 <li class="sidebar-search">
     <div class="input-group custom-search-form">
-        <input type="text" class="form-control" placeholder="Tim kiem...">
-        <span class="input-group-btn">
-            <button class="btn btn-default" type="button">
-                <i class="fa fa-search"></i>
-            </button>
-        </span>
+        @*@using (Html.BeginForm("Create", "Review", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.Hidden("ID_Sach", Model.Sach.ID_Sach)
+            @Html.TextArea("NoiDung", new { @class = "form-control", @rows = "3" })
+
+            <div class="text-right">
+                <input type="submit" class="btn btn-success" value="Dang binh luan" />
+            </div>
+        }*@
+        @using (Html.BeginForm("Search", "Menu", FormMethod.Post))
+        {
+            <div class="input-group custom-search-form">
+                @Html.TextBox("keyword", "", new { @class = "form-control", placeholder="Tim kiem..." })
+                @*<input type="text" class="form-control" placeholder="Tim kiem...">*@
+                @Html.AntiForgeryToken()
+
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+        }        
     </div>
 </li>  

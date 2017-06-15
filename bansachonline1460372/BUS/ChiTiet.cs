@@ -21,5 +21,16 @@ namespace BUS
             { Sach = sach, TacGia = tacgia, AvailableShippingDate = giaohang, NhaXuatBan = nxb, Series = seri, TheLoai = theloai };
             return chitiet;
         }
+
+        public static DTO.ChiTietGioHang GioHang(int ID_GioHang)
+        {
+            var giohang = DAO.ChiTietGioHang.get(ID_GioHang);
+            var sach = DAO.ChiTietSach.get(giohang.ID_Sach.GetValueOrDefault());
+            //var tacgia = BUS.ChiTiet.Sach(sach.ID_Sach).TacGia;
+            var taikhoan = DAO.TaiKhoanCuaGioHang.get(ID_GioHang);
+            var 
+
+            return;
+        }
     }
 }

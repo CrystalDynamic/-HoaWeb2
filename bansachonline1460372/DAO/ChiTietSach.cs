@@ -24,5 +24,7 @@ namespace DAO
                 db.Execute("update Sach set Sach.LuotXem_Sach = Sach.LuotXem_Sach + 1 where Sach.ID_Sach = @0", id);
             }
         }
+
+     
     }
 }

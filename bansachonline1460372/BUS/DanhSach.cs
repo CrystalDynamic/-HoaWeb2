@@ -42,5 +42,15 @@ namespace BUS
         {
             return DAO.BinhLuan.get(ID_Sach);
         }
+
+        public static IEnumerable<BanSachOnlineConnection.Sach> LienQuan(int ID_Sach)
+        {
+            return DAO.LienQuanSach.get(ID_Sach);
+        }
+
+        public static IEnumerable<BanSachOnlineConnection.Sach> TimKiem(string keyword)
+        {
+            return DAO.Search.get(keyword);
+        }
     }
 }
