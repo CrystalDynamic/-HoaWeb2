@@ -8,7 +8,7 @@ namespace DAO
 {
     public class Series
     {
-        public static IEnumerable<BanSachOnlineConnection.Series> get()
+        public static IEnumerable<BanSachOnlineConnection.Series> DanhSach()
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
@@ -16,11 +16,19 @@ namespace DAO
             }
         }
 
-        public static PetaPoco.Page<BanSachOnlineConnection.Series> get(int pageIndex, int itemPer)
+        public static PetaPoco.Page<BanSachOnlineConnection.Series> DanhSach(int pageIndex, int itemPer)
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
                 return db.Page<BanSachOnlineConnection.Series>(pageIndex, itemPer, "select * from Series");
+            }
+        }
+
+        public static BanSachOnlineConnection.Series CuaSach(int id)
+        {
+            using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
+            {
+                return db.Query<BanSachOnlineConnection.Series>("select Series.* from Series, Sach where Sach.ID_Series = Series.ID_Series and Sach.ID_Sach = @0", id).FirstOrDefault();
             }
         }
     }

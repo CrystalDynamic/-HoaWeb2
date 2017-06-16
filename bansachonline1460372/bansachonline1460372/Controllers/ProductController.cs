@@ -17,27 +17,27 @@ namespace bansachonline1460372.Controllers
 
         public ActionResult Author(int id, int page = 1)
         {
-            return View(BUS.DanhSachCua.TacGia(id, page, itemPerPage));
+            return View(BUS.DanhSach.TacGia(id, page, itemPerPage));
         }
 
         public ActionResult Publisher(int id, int page = 1)
         {
-            return View(BUS.DanhSachCua.NhaXuatBan(id, page, itemPerPage));
+            return View(BUS.DanhSach.NhaXuatBan(id, page, itemPerPage));
         }
 
         public ActionResult AvailableShippingDate(int id, int page = 1)
         {
-            return View(BUS.DanhSachCua.GiaoHang(id, page, itemPerPage));
+            return View(BUS.DanhSach.GiaoHang(id, page, itemPerPage));
         }
 
         public ActionResult Genre(int id, int page = 1)
         {
-            return View(BUS.DanhSachCua.TheLoai(id, page, itemPerPage));
+            return View(BUS.DanhSach.TheLoai(id, page, itemPerPage));
         }
 
         public ActionResult Series(int id, int page = 1)
         {
-            return View(BUS.DanhSachCua.Series(id, page, itemPerPage));
+            return View(BUS.DanhSach.Series(id, page, itemPerPage));
         }
 
         public ActionResult List(int page = 1)

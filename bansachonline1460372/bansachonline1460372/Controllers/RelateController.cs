@@ -12,7 +12,7 @@ namespace bansachonline1460372.Controllers
         public ActionResult Index(int ID_Sach)
         {
             //ViewBag.ID_Sach = ID_Sach;
-            return View(BUS.DanhSach.LienQuan(ID_Sach));
+            return View(BUS.DanhSach.LienQuanSeries(ID_Sach));
         }
     }
 }

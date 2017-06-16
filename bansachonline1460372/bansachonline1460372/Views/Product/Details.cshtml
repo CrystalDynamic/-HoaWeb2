@@ -40,68 +40,19 @@
                         <p>Luot xem: @Model.Sach.LuotXem_Sach</p>
                     </div>
 
-                    @*@using (Html.BeginForm("Add", "Cart", FormMethod.Post))
-                        {
-                            @Html.Hidden("ID_Sach", Model.Sach.ID_Sach);
-                            <button type="submit" class="btn btn-outline btn-success fa fa-shopping-cart">THEM VAO GIO HANG</button>
-                        }*@
-
-                    @*@Html.ActionLink("index cart", "Index", "Cart")*@
-
-                    
-
+                    @using (Html.BeginForm("Add", "Cart", FormMethod.Post))
+                    {
+                        @Html.Hidden("ID_Sach", Model.Sach.ID_Sach);
+                        <button type="submit" class="btn btn-outline btn-success fa fa-shopping-cart">THEM VAO GIO HANG</button>
+                    }                                        
+                   
                 </div>
             </div>
 
             @Html.Action("Index", "Relate", new { ID_Sach = Model.Sach.ID_Sach })
-
         </div>
-
-        @*<div class="well">
-                <h4>Binh Luan</h4>
-                <div class="form-group">
-                    @using (Html.BeginForm("Create", "Review", FormMethod.Post))
-                    {
-                        @Html.AntiForgeryToken()
-                        @Html.Hidden("ID_Sach", Model.Sach.ID_Sach)
-                        @Html.TextArea("NoiDung", new { @class = "form-control", @rows = "3" })
-
-                        <div class="text-right">
-                            <input type="submit" class="btn btn-success" value="Dang binh luan" />
-                        </div>
-                    }
-                </div>
-                <hr>
-
-                @foreach (var item in Model)
-                {
-                    <div class="row">
-                        <div class="col-md-12">
-                            <p>@item.NoiDung_BinhLuan</p>
-                        </div>
-                    </div>
-                    <hr>
-                }
-            </div>*@
 
         @Html.Action("Index", "Review", new { ID_Sach = Model.Sach.ID_Sach });
 
     </div>
 </div>
-
-@*@model BanSachOnline_1460372.Models.ShowModel.SachShowModel
-
-    @{
-        ViewBag.Title = "Details";
-    }
-
-    @Html.ActionLink(Model.TacGia.Ten_TacGia, "Author", new { id = Model.TacGia.ID_TacGia })
-
-
-
-    <h2>@Model.Sach.Ten_Sach</h2>
-    <h2>@Model.Sach.Gia_Sach</h2>
-    <h2>@Model.Sach.NoiDung_Sach</h2>*@
-
-
-

@@ -42,7 +42,17 @@
             </div> 
 
             <ul class="nav navbar-top-links navbar-right">
-                @Html.Partial("_LoginPartial")
+                @Html.Partial("_LoginPartial")                
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-shopping-cart fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            @Html.ActionLink("Gio Hang", "Index", "Cart")
+                        </li>
+                    </ul>
+                </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-paw fa-fw"></i> <i class="fa fa-caret-down"></i>

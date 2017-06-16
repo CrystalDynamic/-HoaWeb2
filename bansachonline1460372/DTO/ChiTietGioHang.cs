@@ -8,7 +8,9 @@ namespace DTO
 {
     public class ChiTietGioHang
     {
+        public BanSachOnlineConnection.GioHang GioHang { get; set; }
         public BanSachOnlineConnection.Sach Sach { get; set; }
         public BanSachOnlineConnection.TaiKhoan TaiKhoan { get; set; }
+        public int SoLuong { get; set; }
     }
 }

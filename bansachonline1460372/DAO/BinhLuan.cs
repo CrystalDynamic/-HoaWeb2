@@ -8,7 +8,7 @@ namespace DAO
 {
     public class BinhLuan
     {
-        public static void add(int ID_Sach, string ID_TaiKhoan, string Ten_KhachHang, string NoiDung)
+        public static void Them(int ID_Sach, string ID_TaiKhoan, string Ten_KhachHang, string NoiDung)
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
@@ -21,7 +21,7 @@ namespace DAO
             }
         }
 
-        public static IEnumerable<BanSachOnlineConnection.BinhLuan> get(int ID_Sach)
+        public static IEnumerable<BanSachOnlineConnection.BinhLuan> CuaSach(int ID_Sach)
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {

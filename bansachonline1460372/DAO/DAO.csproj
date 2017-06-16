@@ -40,30 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AvailableShippingDate.cs" />
-    <Compile Include="AvailableShippingDateCuaSach.cs" />
+    <Compile Include="GiaoHang.cs" />
     <Compile Include="BinhLuan.cs" />
-    <Compile Include="ChiTietGioHang.cs" />
-    <Compile Include="ChiTietSach.cs" />
-    <Compile Include="LienQuanSach.cs" />
+    <Compile Include="GioHang.cs" />
     <Compile Include="NhaXuatBan.cs" />
-    <Compile Include="NhaXuatBanCuaSach.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sach.cs" />
-    <Compile Include="SachCuaGiaoHang.cs" />
-    <Compile Include="SachCuaNhaXuatBan.cs" />
-    <Compile Include="SachCuaSeries.cs" />
-    <Compile Include="SachCuaTacGia.cs" />
-    <Compile Include="SachCuaTheLoai.cs" />
-    <Compile Include="Search.cs" />
     <Compile Include="Series.cs" />
-    <Compile Include="SeriesCuaSach.cs" />
     <Compile Include="TacGia.cs" />
-    <Compile Include="TacGiaCuaGioHang.cs" />
-    <Compile Include="TacGiaCuaSach.cs" />
-    <Compile Include="TaiKhoanCuaGioHang.cs" />
+    <Compile Include="TaiKhoan.cs" />
     <Compile Include="TheLoai.cs" />
-    <Compile Include="TheLoaiCuaSach.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

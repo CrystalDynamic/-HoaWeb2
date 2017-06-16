@@ -10,11 +10,16 @@ namespace bansachonline1460372.Controllers
     public class ReviewController : Controller
     {
         [Authorize]
-        public ActionResult Create(int ID_Sach = 0, string NoiDung = "")
+        public ActionResult Add(int ID_Sach = 0, string NoiDung = "")
         {
             if (ID_Sach == 0)
             {
-                return Redirect("/");
+                return Redirect("/");                
+            }
+
+            if (NoiDung == "")
+            {
+                return RedirectToAction("Details", "Product", new { id = ID_Sach });
             }
 
             //User.Identity

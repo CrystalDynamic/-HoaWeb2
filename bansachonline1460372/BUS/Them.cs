@@ -10,12 +10,17 @@ namespace BUS
     {
         public static void BinhLuan(int ID_Sach, string ID_TaiKhoan, string Ten_KhachHang, string NoiDung)
         {
-            DAO.BinhLuan.add(ID_Sach, ID_TaiKhoan, Ten_KhachHang, NoiDung);
+            DAO.BinhLuan.Them(ID_Sach, ID_TaiKhoan, Ten_KhachHang, NoiDung);
         }
 
         public static void LuotXem(int id)
         {
-            DAO.ChiTietSach.add(id);
+            DAO.Sach.ThemLuotXem(id);
+        }
+
+        public static void GioHang(int ID_Sach, string ID_TaiKhoan)
+        {
+            DAO.GioHang.Them(ID_Sach, ID_TaiKhoan, 1);
         }
     }
 }

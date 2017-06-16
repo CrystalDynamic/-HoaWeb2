@@ -8,49 +8,89 @@ namespace BUS
 {
     public class DanhSach
     {
+        //list of table 
         public static IEnumerable<BanSachOnlineConnection.TacGium> TacGia()
         {
-            return DAO.TacGia.get();
+            return DAO.TacGia.DanhSach();
         }
 
         public static IEnumerable<BanSachOnlineConnection.TheLoai> TheLoai()
         {
-            return DAO.TheLoai.get();
+            return DAO.TheLoai.DanhSach();
         }
 
         public static IEnumerable<BanSachOnlineConnection.NhaXuatBan> NhaXuatBan()
         {
-            return DAO.NhaXuatBan.get();
+            return DAO.NhaXuatBan.DanhSach();
         }
 
         public static IEnumerable<BanSachOnlineConnection.Series> Series()
         {
-            return DAO.Series.get();       
+            return DAO.Series.DanhSach();       
         }
 
-        public static IEnumerable<BanSachOnlineConnection.AvailableShippingDate> AvailableShippingDate()
+        public static IEnumerable<BanSachOnlineConnection.AvailableShippingDate> GiaoHang()
         {
-            return DAO.AvailableShippingDate.get();
+            return DAO.GiaoHang.DanhSach();
         }
 
         public static PetaPoco.Page<BanSachOnlineConnection.Sach> Sach(int page, int itemPer)
         {
-            return DAO.Sach.get(page, itemPer);
+            return DAO.Sach.DanhSach(page, itemPer);
         }
 
+        //load date theo para
         public static IEnumerable<BanSachOnlineConnection.BinhLuan> BinhLuan(int ID_Sach)
         {
-            return DAO.BinhLuan.get(ID_Sach);
+            return DAO.BinhLuan.CuaSach(ID_Sach);
         }
 
-        public static IEnumerable<BanSachOnlineConnection.Sach> LienQuan(int ID_Sach)
+        public static BanSachOnlineConnection.TaiKhoan TaiKhoan(string ID_TaiKhoan)
         {
-            return DAO.LienQuanSach.get(ID_Sach);
+            return DAO.TaiKhoan.CuaTaiKhoan(ID_TaiKhoan);
         }
 
-        public static IEnumerable<BanSachOnlineConnection.Sach> TimKiem(string keyword)
+        public static PetaPoco.Page<BanSachOnlineConnection.Sach> TacGia(int id, int page, int itemPer)
         {
-            return DAO.Search.get(keyword);
+            return DAO.Sach.CuaTacGia(id, page, itemPer);
         }
+
+        public static PetaPoco.Page<BanSachOnlineConnection.Sach> GiaoHang(int id, int page, int itemPer)
+        {
+            return DAO.Sach.CuaGiaoHang(id, page, itemPer);
+        }
+
+        public static PetaPoco.Page<BanSachOnlineConnection.Sach> NhaXuatBan(int id, int page, int itemPer)
+        {
+            return DAO.Sach.CuaNhaXuatBan(id, page, itemPer);
+        }
+
+        public static PetaPoco.Page<BanSachOnlineConnection.Sach> TheLoai(int id, int page, int itemPer)
+        {
+            return DAO.Sach.CuaTheLoai(id, page, itemPer);
+        }
+
+        public static PetaPoco.Page<BanSachOnlineConnection.Sach> Series(int id, int page, int itemPer)
+        {
+            return DAO.Sach.CuaSeries(id, page, itemPer);
+        }
+
+        public static IEnumerable<BanSachOnlineConnection.GioHang> GioHang(string ID_TaiKhoan)
+        {
+            return DAO.GioHang.CuaTaiKhoan(ID_TaiKhoan);
+        }
+        
+        //???
+        public static IEnumerable<BanSachOnlineConnection.Sach> LienQuanSeries(int ID_Sach)
+        {
+            return DAO.Sach.LienQuanSeries(ID_Sach);
+        }
+
+        public static IEnumerable<BanSachOnlineConnection.Sach> TimKiemTen(string keyword)
+        {
+            return DAO.Sach.TimTheoTen(keyword);
+        }
+
+        
     }
 }

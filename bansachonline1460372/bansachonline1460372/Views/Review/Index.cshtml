@@ -11,7 +11,7 @@
     @if (User.Identity.IsAuthenticated)
     {
         <div class="form-group">
-            @using (Html.BeginForm("Create", "Review", FormMethod.Post))
+            @using (Html.BeginForm("Add", "Review", FormMethod.Post))
             {
                 @Html.AntiForgeryToken()
                 @Html.Hidden("ID_Sach", (int)ViewBag.ID_Sach)
@@ -26,7 +26,8 @@
     }
     else
     {
-        <p>vui long <a href="/Account/Login">dang nhap</a> de binh luan</p>
+        @*<p>vui long <a href="/Account/Login">dang nhap</a> de binh luan</p>*@
+        <p>vui long <a href="/Account/Login?ReturnUrl=@Request.RawUrl">dang nhap</a> de binh luan</p>
     }
     <hr>
     @foreach (var item in Model)

@@ -30,7 +30,7 @@ namespace bansachonline1460372.Controllers
 
         public ActionResult AvailableShippingDate_Menu()
         {
-            return View(BUS.DanhSach.AvailableShippingDate());
+            return View(BUS.DanhSach.GiaoHang());
         }
 
         public ActionResult List_Menu()
@@ -45,7 +45,7 @@ namespace bansachonline1460372.Controllers
 
         public ActionResult Search(string keyword)
         {
-            return View(BUS.DanhSach.TimKiem(keyword));
+            return View(BUS.DanhSach.TimKiemTen(keyword));
         }
     }
 }
