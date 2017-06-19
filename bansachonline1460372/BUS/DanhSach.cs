@@ -39,10 +39,25 @@ namespace BUS
             return DAO.Sach.DanhSach(page, itemPer);
         }
 
+        public static IEnumerable<BanSachOnlineConnection.Sach> Sach()
+        {
+            return DAO.Sach.DanhSach();
+        }
+
+        public static IEnumerable<BanSachOnlineConnection.TaiKhoan> TaiKhoan()
+        {
+            return DAO.TaiKhoan.DanhSach();
+        }
+
         //load date theo para
         public static IEnumerable<BanSachOnlineConnection.BinhLuan> BinhLuan(int ID_Sach)
         {
             return DAO.BinhLuan.CuaSach(ID_Sach);
+        }
+
+        public static PetaPoco.Page<BanSachOnlineConnection.BinhLuan> BinhLuan(int ID_Sach, int page, int itemPer)
+        {
+            return DAO.BinhLuan.CuaSach(ID_Sach, page, itemPer);
         }
 
         public static BanSachOnlineConnection.TaiKhoan TaiKhoan(string ID_TaiKhoan)
@@ -80,7 +95,12 @@ namespace BUS
             return DAO.GioHang.CuaTaiKhoan(ID_TaiKhoan);
         }
         
-        //???
+        public static IEnumerable<BanSachOnlineConnection.DonHang> DonHang(decimal tong)
+        {
+            return DAO.DonHang.DanhSach(tong);
+        }
+
+        // --
         public static IEnumerable<BanSachOnlineConnection.Sach> LienQuanSeries(int ID_Sach)
         {
             return DAO.Sach.LienQuanSeries(ID_Sach);
@@ -91,6 +111,9 @@ namespace BUS
             return DAO.Sach.TimTheoTen(keyword);
         }
 
-        
+        public static IEnumerable<BanSachOnlineConnection.DonHang> DonHang()
+        {
+            return DAO.DonHang.DanhSach();
+        }
     }
 }

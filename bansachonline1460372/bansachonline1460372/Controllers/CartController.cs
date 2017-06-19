@@ -13,6 +13,10 @@ namespace bansachonline1460372.Controllers
         // GET: Cart        
         public ActionResult Index()
         {            
+            if (BUS.KimGoEun.get(User.Identity.GetUserId()).dsctGioHang.FirstOrDefault() == null)
+            {
+                return RedirectToAction("Index", "Product");
+            }
             return View(BUS.KimGoEun.get(User.Identity.GetUserId()));
         }
 
@@ -25,8 +29,9 @@ namespace bansachonline1460372.Controllers
             }           
 
             BUS.Them.GioHang(ID_Sach, User.Identity.GetUserId());
-            return RedirectToAction("Details", "Product", new { id = ID_Sach });
-        }
+            //return RedirectToAction("Details", "Product", new { id = ID_Sach });
+            return RedirectToAction("Index", "Cart");
+        }        
 
         //[HttpPost]
         public ActionResult Update(int ID_Sach, int soluong)
@@ -34,11 +39,12 @@ namespace bansachonline1460372.Controllers
             BUS.CapNhat.GioHang(ID_Sach, soluong);
             return RedirectToAction("Index");
         }
-
-        //public ActionResult CheckOut()
-        //{
-        //    var dsgh = BUS.KimGoEun.get(User.Identity.GetUserId();
-        //    return View();
-        //}
+        
+        public ActionResult CheckOut(decimal tong)
+        {
+                       
+            BUS.Them.DonHang(User.Identity.GetUserId());
+            return View(BUS.DanhSach.DonHang(tong));
+        }
     }
 }

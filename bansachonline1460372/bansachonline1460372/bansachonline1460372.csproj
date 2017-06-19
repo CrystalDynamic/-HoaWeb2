@@ -167,6 +167,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -387,6 +389,15 @@
     <Content Include="Content\sbadmin2\vendor\font-awesome\scss\_spinning.scss" />
     <Content Include="Content\sbadmin2\vendor\font-awesome\scss\_stacked.scss" />
     <Content Include="Content\sbadmin2\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Admin_BookStoreLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\Upd.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\TK.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\Upd1.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\Bill.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\Upd3.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -453,9 +464,11 @@
     <Content Include="Views\Relate\Index.cshtml" />
     <Content Include="Views\Menu\Search.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Cart\CheckOut.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

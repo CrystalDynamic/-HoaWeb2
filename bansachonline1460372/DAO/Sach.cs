@@ -12,7 +12,7 @@ namespace DAO
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                return db.Query<BanSachOnlineConnection.Sach>("select * from Sach");
+                return db.Query<BanSachOnlineConnection.Sach>("select * from Sach where BiXoa_Sach = 0");
             }
         }
 
@@ -20,7 +20,7 @@ namespace DAO
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                return db.Page<BanSachOnlineConnection.Sach>(pageIndex, itemPer, "select * from Sach");
+                return db.Page<BanSachOnlineConnection.Sach>(pageIndex, itemPer, "select * from Sach where BiXoa_Sach = 0");
             }
         }
 
@@ -28,7 +28,7 @@ namespace DAO
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                return db.Query<BanSachOnlineConnection.Sach>("select * from Sach where ID_AvailableShippingDate = @0", id);
+                return db.Query<BanSachOnlineConnection.Sach>("select * from Sach where ID_AvailableShippingDate = @0 and BiXoa_Sach = 0", id);
             }
         }
 
@@ -36,7 +36,7 @@ namespace DAO
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                return db.Page<BanSachOnlineConnection.Sach>(page, itemPer, "select * from Sach where ID_AvailableShippingDate = @0", id);
+                return db.Page<BanSachOnlineConnection.Sach>(page, itemPer, "select * from Sach where ID_AvailableShippingDate = @0 and BiXoa_Sach = 0", id);
             }
         }
 
@@ -44,7 +44,7 @@ namespace DAO
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                return db.Query<BanSachOnlineConnection.Sach>("select * from Sach where ID_NhaXuatBan = @0", id);
+                return db.Query<BanSachOnlineConnection.Sach>("select * from Sach where ID_NhaXuatBan = @0 and BiXoa_Sach = 0", id);
             }
         }
 
@@ -52,7 +52,7 @@ namespace DAO
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                return db.Page<BanSachOnlineConnection.Sach>(page, itemPer, "select * from Sach where ID_NhaXuatBan = @0", id);
+                return db.Page<BanSachOnlineConnection.Sach>(page, itemPer, "select * from Sach where ID_NhaXuatBan = @0 and BiXoa_Sach = 0", id);
             }
         }
 
@@ -60,7 +60,7 @@ namespace DAO
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                return db.Query<BanSachOnlineConnection.Sach>("select * from Sach where ID_Series = @0", id);
+                return db.Query<BanSachOnlineConnection.Sach>("select * from Sach where ID_Series = @0 and BiXoa_Sach = 0", id);
             }
         }
 
@@ -68,7 +68,7 @@ namespace DAO
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                return db.Page<BanSachOnlineConnection.Sach>(page, itemPer, "select * from Sach where ID_Series = @0", id);
+                return db.Page<BanSachOnlineConnection.Sach>(page, itemPer, "select * from Sach where ID_Series = @0 and BiXoa_Sach = 0", id);
             }
         }
 
@@ -76,7 +76,7 @@ namespace DAO
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                return db.Query<BanSachOnlineConnection.Sach>("select * from Sach where ID_TacGia = @0", id);
+                return db.Query<BanSachOnlineConnection.Sach>("select * from Sach where ID_TacGia = @0 and BiXoa_Sach = 0", id);
             }
         }
 
@@ -84,7 +84,7 @@ namespace DAO
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                return db.Page<BanSachOnlineConnection.Sach>(page, itemPer, "select * from Sach where ID_TacGia = @0", id);
+                return db.Page<BanSachOnlineConnection.Sach>(page, itemPer, "select * from Sach where ID_TacGia = @0 and BiXoa_Sach = 0", id);
             }
         }
 
@@ -92,7 +92,7 @@ namespace DAO
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                return db.Query<BanSachOnlineConnection.Sach>("select Sach.* from Sach, TheLoai_Sach where (Sach.ID_Series = TheLoai_Sach.ID_Series and TheLoai_Sach.ID_TheLoai = @0)", id);
+                return db.Query<BanSachOnlineConnection.Sach>("select Sach.* from Sach, TheLoai_Sach where (Sach.ID_Series = TheLoai_Sach.ID_Series and TheLoai_Sach.ID_TheLoai = @0 and Sach.BiXoa_Sach = 0)", id);
             }
         }
 
@@ -100,7 +100,7 @@ namespace DAO
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                return db.Page<BanSachOnlineConnection.Sach>(page, itemPer, "select Sach.* from Sach, TheLoai_Sach where (Sach.ID_Series = TheLoai_Sach.ID_Series and TheLoai_Sach.ID_TheLoai = @0)", id);
+                return db.Page<BanSachOnlineConnection.Sach>(page, itemPer, "select Sach.* from Sach, TheLoai_Sach where (Sach.ID_Series = TheLoai_Sach.ID_Series and TheLoai_Sach.ID_TheLoai = @0 and Sach.BiXoa_Sach = 0)", id);
             }
         }
 
@@ -108,7 +108,7 @@ namespace DAO
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                return db.Query<BanSachOnlineConnection.Sach>("select Sach.* from Sach, GioHang where GioHang.ID_Sach = Sach.ID_Sach and GioHang.ID_GioHang = @0", id).FirstOrDefault();
+                return db.Query<BanSachOnlineConnection.Sach>("select Sach.* from Sach, GioHang where GioHang.ID_Sach = Sach.ID_Sach and GioHang.ID_GioHang = @0 and Sach.BiXoa_Sach = 0", id).FirstOrDefault();
             }
         }
 
@@ -117,7 +117,7 @@ namespace DAO
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                return db.Query<BanSachOnlineConnection.Sach>("select * from Sach where Sach.ID_Series = (select ID_Series from Sach where ID_Sach = @0)", id);
+                return db.Query<BanSachOnlineConnection.Sach>("select * from Sach where Sach.ID_Series = (select ID_Series from Sach where ID_Sach = @0) and BiXoa_Sach = 0", id);
             }
         }
 
@@ -125,7 +125,7 @@ namespace DAO
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                return db.Query<BanSachOnlineConnection.Sach>("select * from Sach where Sach.Ten_Sach like '%' +@0+ '%' or Sach.Gia_Sach like '%' +@0+ '%'", keyword);
+                return db.Query<BanSachOnlineConnection.Sach>("select * from Sach where Sach.Ten_Sach like '%' +@0+ '%' or Sach.Gia_Sach like '%' +@0+ '%' and BiXoa_Sach = 0", keyword);
             }
         }
 
@@ -134,7 +134,7 @@ namespace DAO
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
                 return db.SingleOrDefault<BanSachOnlineConnection.Sach>
-                ("select Sach.*, TacGia.*, Series.* from Sach, TacGia, Series where Sach.ID_TacGia = TacGia.ID_TacGia and Sach.ID_Series = Series.ID_Series and Sach.ID_Sach = @0", id);
+                ("select Sach.*, TacGia.*, Series.* from Sach, TacGia, Series where Sach.BiXoa_Sach = 0 and Sach.ID_TacGia = TacGia.ID_TacGia and Sach.ID_Series = Series.ID_Series and Sach.ID_Sach = @0", id);
             }
         }
 
@@ -142,7 +142,25 @@ namespace DAO
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                db.Execute("update Sach set Sach.LuotXem_Sach = Sach.LuotXem_Sach + 1 where Sach.ID_Sach = @0", id);
+                db.Execute("update Sach set Sach.LuotXem_Sach = Sach.LuotXem_Sach + 1 where Sach.ID_Sach = @0 and BiXoa_Sach = 0", id);
+            }
+        }
+
+        public static void Xoa(int id)
+        {
+            using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
+            {
+                db.Execute("update Sach set BiXoa_Sach = 1 where ID_Sach = @0", id);
+            }
+        }
+
+        public static void CapNhat(int ID_Sach, string ten, decimal gia)
+        {
+            using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
+            {
+                db.Execute("update Sach set Ten_Sach = @0 where ID_Sach = @1", ten, ID_Sach);
+                db.Execute("update Sach set Gia_Sach = @0 where ID_Sach = @1", gia, ID_Sach);
+              
             }
         }
     }

@@ -1,15 +1,15 @@
 ﻿@*@model DTO.ChiTietGioHang
 
-@{
-    ViewBag.Title = "Index";
-}
+    @{
+        ViewBag.Title = "Index";
+    }
 
-<h2>Index gio hang</h2>
+    <h2>Index gio hang</h2>
 
-@Model.GioHang.ID_GioHang<br />
-@Model.Sach.Ten_Sach<br />
-@Model.GioHang.SoLuong_GioHang<br />
-@Model.TaiKhoan.TenKhachHang_TaiKhoan<br />*@
+    @Model.GioHang.ID_GioHang<br />
+    @Model.Sach.Ten_Sach<br />
+    @Model.GioHang.SoLuong_GioHang<br />
+    @Model.TaiKhoan.TenKhachHang_TaiKhoan<br />*@
 
 @model DTO.KimGoEun
 
@@ -28,8 +28,8 @@
                 <div class="table-responsive">
                     <table class="table table-hover">
                         <thead>
-                            <tr> 
-                                <th>Trang Bia</th>                                   
+                            <tr>
+                                <th>Trang Bia</th>
                                 <th>Ten Sach</th>
                                 <th>So Luong</th>
                                 <th>Chuc Nang</th>
@@ -37,10 +37,10 @@
                         </thead>
                         @foreach (var item in Model.dsctGioHang)
                         {
-                            <tbody>  
+                            <tbody>
                                 @using (Html.BeginForm("Update", "Cart", FormMethod.Post))
-                                { 
-                                    <tr>                        
+                                {
+                                    <tr>
                                         @Html.Hidden("ID_Sach", item.Sach.ID_Sach)
                                         @Html.AntiForgeryToken()
                                         <td>
@@ -53,19 +53,36 @@
                                         <td><input type="submit" value="cap nhat" class="btn btn-success" /></td>
                                     </tr>
                                 }
-                            </tbody> 
-                        }                        
+                            </tbody>
+                        }
                     </table>
                 </div>
                 <!-- /.table-responsive -->
             </div>
             <!-- /.panel-body -->
-        </div>        
+        </div>
     </div>
 </div>
 
-@using (Html.BeginForm("CheckOut", "Cart", FormMethod.Post))
-{
-    @Html.Hidden();
-    <button type="submit" class="btn btn-outline btn-success fa fa-money">THANH TOAN</button>
-}       
+<div class="row">
+    <div class="col-lg-6">
+        @{
+            decimal tong = 0;
+        }
+        @foreach (var item in Model.dsctGioHang)
+        {
+            tong = tong + item.GioHang.SoLuong_GioHang.GetValueOrDefault() * item.Sach.Gia_Sach.GetValueOrDefault();
+        }
+        Thanh tien = @tong        
+    </div>
+    
+    <div class="col-lg-6">
+        @using (Html.BeginForm("CheckOut", "Cart", FormMethod.Post))
+        {
+            @Html.Hidden("tong", tong)
+            <button type="submit" class="btn btn-outline btn-success fa fa-thumbs-up">THANH TOAN</button>
+        }
+    </div>     
+</div>
+<br />
+<br /><br />

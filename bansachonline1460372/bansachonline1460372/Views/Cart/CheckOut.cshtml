@@ -1,0 +1,26 @@
+﻿@model IEnumerable<BanSachOnlineConnection.DonHang>
+
+@{
+    ViewBag.Title = "CheckOut";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-red">
+            <div class="panel-heading">
+                @Model.FirstOrDefault().Ngay_DonHang ,don Hang cua @Model.FirstOrDefault().TenKhachHang_TaiKhoan
+            </div>
+            <div class="panel-body">
+                @foreach (var item in Model)
+                {
+                    <p>Ten Sach: @item.Ten_Sach</p>
+                    <p>So luong: x @item.SoLuong_DonHang</p>
+                    <hr />
+                }
+            </div>
+            <div class="panel-footer">
+                Tong tien = @Model.FirstOrDefault().TongTien_DonHang
+            </div>
+        </div>
+    </div>    
+</div>

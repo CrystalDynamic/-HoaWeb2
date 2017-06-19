@@ -25,7 +25,7 @@
 // 
 //     Connection String Name: `BanSachOnlineConnection`
 //     Provider:               `System.Data.SqlClient`
-//     Connection String:      `Data Source=YURIHONJO\HONTO;Initial Catalog=BanSachOnline;User ID=sa;Password=wendy`
+//     Connection String:      `Data Source=YURIHONJO\HONTO;Initial Catalog=BanSachOnline;User ID=sa;Password=kimgoeun`
 //     Schema:                 ``
 //     Include Views:          `False`
 
@@ -220,41 +220,41 @@ namespace BanSachOnlineConnection
 
     
 
-	[TableName("dbo.DatHang")]
+	[TableName("dbo.DonHang")]
 
 
 
-	[PrimaryKey("ID_DatHang")]
+	[PrimaryKey("ID_DonHang")]
 
 
 
 
 	[ExplicitColumns]
 
-    public partial class DatHang : BanSachOnlineConnectionDB.Record<DatHang>  
+    public partial class DonHang : BanSachOnlineConnectionDB.Record<DonHang>  
     {
 
 
 
-		[Column] public int ID_DatHang { get; set; }
+		[Column] public int ID_DonHang { get; set; }
 
 
 
 
 
-		[Column] public DateTime? NgayDat_DatHang { get; set; }
+		[Column] public int? ID_Sach { get; set; }
 
 
 
 
 
-		[Column] public decimal? DonGia_DatHang { get; set; }
+		[Column] public string Ten_Sach { get; set; }
 
 
 
 
 
-		[Column] public int? ID_TinhTrang { get; set; }
+		[Column] public int? SoLuong_DonHang { get; set; }
 
 
 
@@ -264,55 +264,33 @@ namespace BanSachOnlineConnection
 
 
 
-	}
-
-    
-
-	[TableName("dbo.DatHangChiTiet")]
 
 
-
-	[PrimaryKey("ID_DatHang", AutoIncrement=false)]
-
-
-	[ExplicitColumns]
-
-    public partial class DatHangChiTiet : BanSachOnlineConnectionDB.Record<DatHangChiTiet>  
-    {
-
-
-
-		[Column] public int ID_DatHang { get; set; }
+		[Column] public string TenKhachHang_TaiKhoan { get; set; }
 
 
 
 
 
-		[Column] public int ID_Sach { get; set; }
+		[Column] public DateTime? Ngay_DonHang { get; set; }
 
 
 
 
 
-		[Column] public int? SoLuong_DatHangChiTiet { get; set; }
+		[Column] public decimal? TongTien_DonHang { get; set; }
 
 
 
 
 
-		[Column] public decimal? Gia_DatHangChiTiet { get; set; }
+		[Column] public int? id { get; set; }
 
 
 
 
 
-		[Column] public decimal? ThanhTien_DatHangChiTiet { get; set; }
-
-
-
-
-
-		[Column] public string ID_TaiKhoan { get; set; }
+		[Column] public int? BiXoa_DonHang { get; set; }
 
 
 
@@ -342,7 +320,7 @@ namespace BanSachOnlineConnection
 
 
 
-		[Column] public int? ID_Sach { get; set; }
+		[Column] public int ID_Sach { get; set; }
 
 
 
@@ -355,6 +333,12 @@ namespace BanSachOnlineConnection
 
 
 		[Column] public string ID_TaiKhoan { get; set; }
+
+
+
+
+
+		[Column] public int? BiXoa_GioHang { get; set; }
 
 
 
@@ -663,36 +647,6 @@ namespace BanSachOnlineConnection
 
 
 		[Column] public int ID_TheLoai { get; set; }
-
-
-
-	}
-
-    
-
-	[TableName("dbo.TinhTrang")]
-
-
-
-	[PrimaryKey("ID_TinhTrang")]
-
-
-
-
-	[ExplicitColumns]
-
-    public partial class TinhTrang : BanSachOnlineConnectionDB.Record<TinhTrang>  
-    {
-
-
-
-		[Column] public int ID_TinhTrang { get; set; }
-
-
-
-
-
-		[Column] public string Ten_TinhTrang { get; set; }
 
 
 

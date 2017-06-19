@@ -68,12 +68,12 @@ create table NhaXuatBan
 	primary key (ID_NhaXuatBan)
 )
 
-create table TinhTrang
-(
-	ID_TinhTrang int identity(1,1),
-	Ten_TinhTrang varchar(10),
-	primary key (ID_TinhTrang)
-)
+--create table TinhTrang
+--(
+--	ID_TinhTrang int identity(1,1),
+--	Ten_TinhTrang varchar(10),
+--	primary key (ID_TinhTrang)
+--)
 
 create table AvailableShippingDate
 (
@@ -99,30 +99,24 @@ create table GioHang
 	ID_Sach int,
 	SoLuong_GioHang int default 1,
 	ID_TaiKhoan nvarchar(128),
-	primary key (ID_GioHang)
+	BiXoa_GioHang int default 0,
+	primary key (ID_GioHang, ID_Sach, ID_TaiKhoan)
 )
 
-create table DatHang
+create table DonHang
 (
-	ID_DatHang int identity(1,1),	
-	NgayDat_DatHang date,
-	DonGia_DatHang decimal(19, 4),
-	ID_TinhTrang int,
-	ID_TaiKhoan nvarchar(128),
-	primary key (ID_DatHang)
-)
-
-create table DatHangChiTiet
-(		
-	ID_DatHang int,	
+	ID_DonHang int identity(1,1),	
 	ID_Sach int,
-	SoLuong_DatHangChiTiet int,
-	Gia_DatHangChiTiet decimal(19, 0),
-	ThanhTien_DatHangChiTiet decimal(19, 0),
+	Ten_Sach varchar(100),
+	SoLuong_DonHang int,
 	ID_TaiKhoan nvarchar(128),
-	primary key (ID_DatHang, ID_Sach)
+	TenKhachHang_TaiKhoan varchar(256),
+	Ngay_DonHang date default getdate(),
+	TongTien_DonHang decimal(19, 4),
+	id int default 1,	
+	primary key (ID_DonHang)
 )
-
+--drop table DonHang
 create table TaiKhoan
 (
 	ID_TaiKhoan nvarchar(128),
@@ -151,12 +145,12 @@ alter table GioHang
 add constraint FK_SachGioHang foreign key (ID_Sach) references Sach(ID_Sach),
 	constraint FK_TaiKhoanGioHang foreign key (ID_TaiKhoan) references TaiKhoan(ID_TaiKhoan)
 
-alter table DatHang
-add constraint FK_TinhTrangDatHang foreign key (ID_TinhTrang) references TinhTrang(ID_TinhTrang)	
+alter table DonHang
+add constraint FK_TinhTrangDonHang foreign key (ID_Sach) references Sach(ID_Sach),
+	constraint FK_TaiKhoanDonHang foreign key (ID_TaiKhoan) references TaiKhoan(ID_TaiKhoan)		
 
-alter table DatHangChiTiet
-add constraint FK_DatHangDatHangChiTiet foreign key (ID_DatHang) references DatHang(ID_DatHang),
-	constraint FK_SachDatHangChiTiet foreign key (ID_Sach) references Sach(ID_Sach)
+
+--insert into TaiKhoan(ID_TaiKhoan, TenKhachHang_TaiKhoan, MatKhau_TaiKhoan, Email_TaiKhoan) values ('0ccf260a-91de-45a1-9496-b1d31435d74c', 'admin1460372@gmail.com', 'Admin_1460372', 'admin1460372@gmail.com')
 
 
 insert into TacGia(Ten_TacGia) values ('Okushou, WATANABE Shizumu')
@@ -239,9 +233,9 @@ insert into AvailableShippingDate(Ten_AvailableShippingDate) values ('7-21 days'
 insert into AvailableShippingDate(Ten_AvailableShippingDate) values ('out stock')
 
 
-insert into TinhTrang(Ten_TinhTrang) values ('huy bo')
-insert into TinhTrang(Ten_TinhTrang) values ('dang xu li')
-insert into TinhTrang(Ten_TinhTrang) values ('hoan tat')
+--insert into TinhTrang(Ten_TinhTrang) values ('huy bo')
+--insert into TinhTrang(Ten_TinhTrang) values ('dang xu li')
+--insert into TinhTrang(Ten_TinhTrang) values ('hoan tat')
 
 
 insert into Sach(Ten_Sach, ID_TacGia, ID_Series, ID_NhaXuatBan, NoiDung_Sach, NgayXuatBan_Sach, Gia_Sach, TrangBia_Sach)

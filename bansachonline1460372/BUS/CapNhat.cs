@@ -12,5 +12,20 @@ namespace BUS
         {
             DAO.GioHang.CapNhat(ID_Sach, soluong);
         }
+
+        public static void Sach(int ID_Sach, string ten , decimal gia)
+        {
+            DAO.Sach.CapNhat(ID_Sach, ten, gia);
+        }
+
+        public static void TaiKhoan(string id, string ten, string matkhau, string email)
+        {
+            DAO.TaiKhoan.CapNhat(id, ten, matkhau, email);
+        }
+
+        public static void DonHang(int id, int soluong, int tongtien)
+        {
+            DAO.DonHang.CapNhat(id, soluong, tongtien);
+        }
     }
 }

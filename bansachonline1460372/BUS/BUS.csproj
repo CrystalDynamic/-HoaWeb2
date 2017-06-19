@@ -40,13 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CheckOut.cs" />
     <Compile Include="ChiTiet.cs" />
     <Compile Include="DanhSach.cs" />
     <Compile Include="KimGoEun.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CapNhat.cs" />
     <Compile Include="Them.cs" />
+    <Compile Include="Xoa.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAO\DAO.csproj">

@@ -30,5 +30,31 @@ namespace BUS
                 return new DTO.KimGoEun() { dsctGioHang = new_ds };
             }
         }
+
+        public static DTO.DanhSachSach dsctS()
+        {
+            using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
+            {
+                var ds = DanhSach.Sach();
+                var new_ds = new List<DTO.ChiTietSach>();
+
+                foreach (var item in ds)
+                {
+                    var s = new DTO.ChiTietSach()
+                    {
+                        Sach = item                    
+                        , AvailableShippingDate = ChiTiet.Sach(item.ID_Sach).AvailableShippingDate
+                        , NhaXuatBan = ChiTiet.Sach(item.ID_Sach).NhaXuatBan
+                        , Series = ChiTiet.Sach(item.ID_Sach).Series
+                        , TacGia = ChiTiet.Sach(item.ID_Sach).TacGia
+                        , TheLoai = ChiTiet.Sach(item.ID_Sach).TheLoai
+                    };
+                    new_ds.Add(s);
+                }
+
+                //return new DTO.KimGoEun() { Sach = sach, GioHang = giohang, TenKhachHang = tenkh, dsctGioHang = new_ds };
+                return new DTO.DanhSachSach() { dsctSach = new_ds };
+            }
+        }
     }
 }

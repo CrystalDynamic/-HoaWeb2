@@ -1,0 +1,81 @@
+﻿@model IEnumerable<BanSachOnlineConnection.DonHang>
+
+@{
+    ViewBag.Title = "Bill";
+}
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Danh sach don hang</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Sach
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Ten sach</th>
+                                @*<th>Noi dung</th>*@
+                                <th>So luong don hang</th>
+                                <th>Ten khach hang</th>
+                                <th>Ngay</th>
+                                <th>Tong tien</th>
+                                <th>Sua</th>
+                                <th>Xoa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.ID_DonHang</td>
+                                    <td>@item.Ten_Sach</td>
+                                    <td>@item.SoLuong_DonHang</td>
+                                    <td>@item.TenKhachHang_TaiKhoan</td>
+                                    <td>@item.Ngay_DonHang</td>
+                                    <td>@item.TongTien_DonHang</td>                                   
+                                    <td>
+                                        @using (Html.BeginForm("Upd3", "Admin", FormMethod.Post))
+                                        {
+                                            @Html.Hidden("id", item.ID_DonHang);
+                                            <button type="submit" class="btn btn-warning btn-circle">
+                                                <i class="fa fa-link"></i>
+                                            </button>
+                                        }
+                                    </td>
+                                    <td>
+                                        @using (Html.BeginForm("Del3", "Admin", FormMethod.Post))
+                                        {
+                                            @Html.Hidden("id", item.ID_DonHang);
+                                            <button type="submit" class="btn btn-danger btn-circle">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        }
+                                    </td>
+                                   
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-6 -->
+</div>
+
+

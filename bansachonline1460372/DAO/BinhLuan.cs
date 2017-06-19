@@ -28,5 +28,13 @@ namespace DAO
                 return db.Query<BanSachOnlineConnection.BinhLuan>("select * from BinhLuan where ID_Sach = @0", ID_Sach);
             }
         }
+
+        public static PetaPoco.Page<BanSachOnlineConnection.BinhLuan> CuaSach(int ID_Sach, int page, int itemPer)
+        {
+            using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
+            {
+                return db.Page<BanSachOnlineConnection.BinhLuan>(page, itemPer, "select * from BinhLuan where ID_Sach = @0", ID_Sach);
+            }
+        }
     }
 }

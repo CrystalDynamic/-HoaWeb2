@@ -26,7 +26,7 @@ namespace bansachonline1460372.Controllers
             BUS.Them.BinhLuan(ID_Sach, User.Identity.GetUserId(), User.Identity.Name, NoiDung);
             return RedirectToAction("Details", "Product", new { id = ID_Sach });
         }
-
+        
         public ActionResult Index(int ID_Sach)
         {
             ViewBag.ID_Sach = ID_Sach;

@@ -1,0 +1,46 @@
+﻿@model BanSachOnlineConnection.DonHang
+@{
+    ViewBag.Title = "Upd3";
+}
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                cap nhat don hang cua @Model.TenKhachHang_TaiKhoan
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>So luong</th>
+                                @*<th>Tac gia</th>
+                                    <th>Series</th>
+                                    <th>Nha xuat ban</th>*@
+                                <th>Tong tien</th>                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @using (Html.BeginForm("UpdBill", "Admin", FormMethod.Post))
+                            {
+                                <tr>
+                                    @Html.Hidden("id", Model.ID_TaiKhoan)
+                                    @Html.AntiForgeryToken()
+                                    <td><input name="soluong" value="@Model.SoLuong_DonHang" type="text" class="form-control" /></td>
+                                    <td><input name="tongtien" value="@Model.TongTien_DonHang" type="text" class="form-control" /></td>
+                                    <td><input type="submit" value="cap nhat" class="btn btn-success" /></td>
+                                </tr>
+                            }
+                        </tbody>
+
+                    </table>
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+    </div>
+</div>

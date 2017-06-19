@@ -25,13 +25,23 @@ namespace BUS
         public static DTO.ChiTietGioHang GioHang(int ID_GioHang)
         {
             var giohang = DAO.GioHang.ChiTiet(ID_GioHang);
-            var sach = DAO.Sach.ChiTiet(giohang.ID_Sach.GetValueOrDefault());
+            var sach = DAO.Sach.ChiTiet(giohang.ID_Sach);
             //var tacgia = BUS.ChiTiet.Sach(sach.ID_Sach).TacGia;
             var taikhoan = DAO.TaiKhoan.CuaGioHang(ID_GioHang);            
 
             var chitiet = new DTO.ChiTietGioHang()
             { Sach = sach, TaiKhoan = taikhoan, GioHang = giohang };
             return chitiet;
+        }
+
+        public static BanSachOnlineConnection.TaiKhoan TaiKhoan(string id)
+        {
+            return DAO.TaiKhoan.CuaTaiKhoan(id);
+        }
+
+        public static BanSachOnlineConnection.DonHang DonHang(int id)
+        {
+            return DAO.DonHang.CuaDonHang(id);
         }
     }
 }

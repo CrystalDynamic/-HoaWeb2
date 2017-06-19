@@ -1,0 +1,49 @@
+﻿@model DTO.ChiTietSach
+
+@{
+    ViewBag.Title = "Upd";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                cap nhat @Model.Sach.Ten_Sach
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Ten</th>
+                                @*<th>Tac gia</th>
+                                <th>Series</th>
+                                <th>Nha xuat ban</th>*@
+                                <th>Gia</th>
+                            </tr>
+                        </thead>                    
+                        <tbody>
+                            @using (Html.BeginForm("UpdProduct", "Admin", FormMethod.Post))
+                            {
+                                <tr>
+                                    @Html.Hidden("ID_Sach", Model.Sach.ID_Sach)
+                                    @Html.AntiForgeryToken()
+                                    <td><input name="ten" value="@Model.Sach.Ten_Sach" type="text" class="form-control" /></td>
+                                    @*<td><input name="tacgia" value="@Model.TacGia.Ten_TacGia" type="text" class="form-control" /></td>
+                                    <td><input name="series" value="@Model.Series.Ten_Series" type="text" class="form-control" /></td>
+                                    <td><input name="nxb" value="@Model.NhaXuatBan.Ten_NhaXuatBan" type="text" class="form-control" /></td>*@
+                                    <td><input name="gia" value="@Model.Sach.Gia_Sach" type="text" class="form-control" /></td>
+                                    <td><input type="submit" value="cap nhat" class="btn btn-success" /></td>
+                                </tr>
+                            }
+                        </tbody>
+                       
+                    </table>
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+    </div>
+</div>

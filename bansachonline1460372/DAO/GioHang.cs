@@ -12,7 +12,7 @@ namespace DAO
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                return db.Query<BanSachOnlineConnection.GioHang>("select * from GioHang where GioHang.ID_GioHang = @0", id).FirstOrDefault();
+                return db.Query<BanSachOnlineConnection.GioHang>("select * from GioHang where GioHang.ID_GioHang = @0 and BiXoa_GioHang = 0", id).FirstOrDefault();
             }
         }
 
@@ -28,7 +28,7 @@ namespace DAO
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                return db.Query<BanSachOnlineConnection.GioHang>("select GioHang.* from GioHang where GioHang.ID_TaiKhoan = @0", ID_TaiKhoan);
+                return db.Query<BanSachOnlineConnection.GioHang>("select GioHang.* from GioHang where GioHang.ID_TaiKhoan = @0 and BiXoa_GioHang = 0", ID_TaiKhoan);
             }
         }
 
@@ -36,7 +36,16 @@ namespace DAO
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                db.Execute("update GioHang set SoLuong_GioHang = @0 where ID_Sach = @1", soluong, ID_Sach);
+                db.Execute("update GioHang set SoLuong_GioHang = @0 where ID_Sach = @1 and BiXoa_GioHang = 0", soluong, ID_Sach);
+            }
+        }
+
+
+        public static void Xoa()
+        {
+            using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
+            {
+                db.Execute("update GioHang set BiXoa_GioHang = 1");
             }
         }
     }
