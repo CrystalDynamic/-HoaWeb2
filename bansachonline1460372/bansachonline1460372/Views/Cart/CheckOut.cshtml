@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BanSachOnlineConnection.DonHang>
+﻿@model DTO.KimGoEun
 
 @{
     ViewBag.Title = "CheckOut";
@@ -8,18 +8,19 @@
     <div class="col-lg-12">
         <div class="panel panel-red">
             <div class="panel-heading">
-                @Model.FirstOrDefault().Ngay_DonHang ,don Hang cua @Model.FirstOrDefault().TenKhachHang_TaiKhoan
+                @Model.DonHang.FirstOrDefault().DonHang.Ngay_DonHang ,don Hang cua khach hang @Model.DonHang.FirstOrDefault().TaiKhoan.TenKhachHang_TaiKhoan
             </div>
             <div class="panel-body">
-                @foreach (var item in Model)
+                @foreach (var item in Model.DonHang)
                 {
-                    <p>Ten Sach: @item.Ten_Sach</p>
-                    <p>So luong: x @item.SoLuong_DonHang</p>
+                    <p>Ten Sach: @item.Sach.Sach.Ten_Sach</p>
+                    <p>So luong: x @item.DonHangChiTiet.SoLuong_DonHangChiTiet</p>
+                    <p>Tinh trang don hang: @item.TinhTrang.Ten_TinhTrang</p>
                     <hr />
                 }
             </div>
             <div class="panel-footer">
-                Tong tien = @Model.FirstOrDefault().TongTien_DonHang
+                Tong tien = @Model.DonHang.FirstOrDefault().DonHang.DonGia_DonHang
             </div>
         </div>
     </div>    

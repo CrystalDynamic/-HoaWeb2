@@ -13,11 +13,11 @@ namespace bansachonline1460372.Controllers
         // GET: Cart        
         public ActionResult Index()
         {            
-            if (BUS.KimGoEun.get(User.Identity.GetUserId()).dsctGioHang.FirstOrDefault() == null)
+            if (BUS.KimGoEun.dsctGioHang(User.Identity.GetUserId()).GioHang.FirstOrDefault() == null)
             {
                 return RedirectToAction("Index", "Product");
             }
-            return View(BUS.KimGoEun.get(User.Identity.GetUserId()));
+            return View(BUS.KimGoEun.dsctGioHang(User.Identity.GetUserId()));
         }
 
         //[HttpPost]
@@ -40,11 +40,10 @@ namespace bansachonline1460372.Controllers
             return RedirectToAction("Index");
         }
         
-        public ActionResult CheckOut(decimal tong)
-        {
-                       
+        public ActionResult CheckOut()
+        {                       
             BUS.Them.DonHang(User.Identity.GetUserId());
-            return View(BUS.DanhSach.DonHang(tong));
+            return View(BUS.KimGoEun.dsctDonHangChiTiet(BUS.KimGoEun.ID_DonHang().ID_DonHang));
         }
     }
 }

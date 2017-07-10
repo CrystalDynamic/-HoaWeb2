@@ -8,19 +8,19 @@ namespace BUS
 {
     public class Xoa
     {
-        public static void Sach(int id)
+        public static void Sach(int ID_Sach)
         {
-            DAO.Sach.Xoa(id);
+            DAO.Sach.Xoa(ID_Sach);
         }
 
-        public static void TaiKhoan(string id)
+        public static void TaiKhoan(string ID_TaiKhoan)
         {
-            DAO.TaiKhoan.Xoa(id);
+            DAO.TaiKhoan.Xoa(ID_TaiKhoan);
         }
 
-        public static void DonHang(int id)
+        public static void DonHang(int ID_DonHang)
         {
-            DAO.DonHang.Xoa(id);
+            DAO.DonHang.Xoa(ID_DonHang);
         }
     }
 }

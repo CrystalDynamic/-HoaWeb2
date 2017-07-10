@@ -41,9 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietDonHang.cs" />
     <Compile Include="ChiTietGioHang.cs" />
     <Compile Include="ChiTietSach.cs" />
-    <Compile Include="DanhSachSach.cs" />
     <Compile Include="KimGoEun.cs" />
     <Compile Include="Models\Generated\Database.cs">
       <AutoGen>True</AutoGen>

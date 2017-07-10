@@ -8,11 +8,11 @@ namespace DAO
 {
     public class GioHang
     {
-        public static BanSachOnlineConnection.GioHang ChiTiet(int id)
+        public static BanSachOnlineConnection.GioHang ChiTiet(int ID_GioHang)
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                return db.Query<BanSachOnlineConnection.GioHang>("select * from GioHang where GioHang.ID_GioHang = @0 and BiXoa_GioHang = 0", id).FirstOrDefault();
+                return db.FirstOrDefault<BanSachOnlineConnection.GioHang>("select * from GioHang where GioHang.ID_GioHang = @0 and BiXoa_GioHang = 0", ID_GioHang);
             }
         }
 
@@ -39,7 +39,6 @@ namespace DAO
                 db.Execute("update GioHang set SoLuong_GioHang = @0 where ID_Sach = @1 and BiXoa_GioHang = 0", soluong, ID_Sach);
             }
         }
-
 
         public static void Xoa()
         {

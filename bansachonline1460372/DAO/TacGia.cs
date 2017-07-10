@@ -24,11 +24,11 @@ namespace DAO
             }
         }
 
-        public static BanSachOnlineConnection.TacGium CuaSach(int id)
+        public static BanSachOnlineConnection.TacGium CuaSach(int ID_Sach)
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                return db.Query<BanSachOnlineConnection.TacGium>("select TacGia.* from TacGia, Sach where Sach.ID_TacGia = TacGia.ID_TacGia and Sach.ID_Sach = @0", id).FirstOrDefault();
+                return db.FirstOrDefault<BanSachOnlineConnection.TacGium>("select TacGia.* from TacGia, Sach where Sach.ID_TacGia = TacGia.ID_TacGia and Sach.ID_Sach = @0", ID_Sach);
             }
         }
 

@@ -194,6 +194,12 @@ namespace BanSachOnlineConnection
 
 
 
+		[Column] public string ID_TaiKhoan { get; set; }
+
+
+
+
+
 		[Column] public string Ten_KhachHang { get; set; }
 
 
@@ -207,12 +213,6 @@ namespace BanSachOnlineConnection
 
 
 		[Column] public DateTime? Ngay_BinhLuan { get; set; }
-
-
-
-
-
-		[Column] public string ID_TaiKhoan { get; set; }
 
 
 
@@ -242,31 +242,7 @@ namespace BanSachOnlineConnection
 
 
 
-		[Column] public int? ID_Sach { get; set; }
-
-
-
-
-
-		[Column] public string Ten_Sach { get; set; }
-
-
-
-
-
-		[Column] public int? SoLuong_DonHang { get; set; }
-
-
-
-
-
 		[Column] public string ID_TaiKhoan { get; set; }
-
-
-
-
-
-		[Column] public string TenKhachHang_TaiKhoan { get; set; }
 
 
 
@@ -278,19 +254,61 @@ namespace BanSachOnlineConnection
 
 
 
-		[Column] public decimal? TongTien_DonHang { get; set; }
+		[Column] public decimal? DonGia_DonHang { get; set; }
 
 
 
 
 
-		[Column] public int? id { get; set; }
+		[Column] public int? ID_TinhTrang { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.DonHangChiTiet")]
+
+
+
+	[PrimaryKey("ID_DonHangChiTiet")]
+
+
+
+
+	[ExplicitColumns]
+
+    public partial class DonHangChiTiet : BanSachOnlineConnectionDB.Record<DonHangChiTiet>  
+    {
+
+
+
+		[Column] public int ID_DonHangChiTiet { get; set; }
 
 
 
 
 
-		[Column] public int? BiXoa_DonHang { get; set; }
+		[Column] public int? ID_DonHang { get; set; }
+
+
+
+
+
+		[Column] public int? ID_Sach { get; set; }
+
+
+
+
+
+		[Column] public int? SoLuong_DonHangChiTiet { get; set; }
+
+
+
+
+
+		[Column] public int? ID_TinhTrang { get; set; }
 
 
 
@@ -647,6 +665,36 @@ namespace BanSachOnlineConnection
 
 
 		[Column] public int ID_TheLoai { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.TinhTrang")]
+
+
+
+	[PrimaryKey("ID_TinhTrang")]
+
+
+
+
+	[ExplicitColumns]
+
+    public partial class TinhTrang : BanSachOnlineConnectionDB.Record<TinhTrang>  
+    {
+
+
+
+		[Column] public int ID_TinhTrang { get; set; }
+
+
+
+
+
+		[Column] public string Ten_TinhTrang { get; set; }
 
 
 

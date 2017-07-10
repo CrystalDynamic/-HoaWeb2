@@ -24,11 +24,11 @@ namespace DAO
             }
         }
 
-        public static BanSachOnlineConnection.AvailableShippingDate CuaSach(int id)
+        public static BanSachOnlineConnection.AvailableShippingDate CuaSach(int ID_Sach)
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                return db.Query<BanSachOnlineConnection.AvailableShippingDate>("select AvailableShippingDate.* from AvailableShippingDate, Sach where Sach.ID_AvailableShippingDate = AvailableShippingDate.ID_AvailableShippingDate and Sach.ID_Sach = @0", id).FirstOrDefault();
+                return db.FirstOrDefault<BanSachOnlineConnection.AvailableShippingDate>("select AvailableShippingDate.* from AvailableShippingDate, Sach where Sach.ID_AvailableShippingDate = AvailableShippingDate.ID_AvailableShippingDate and Sach.ID_Sach = @0", ID_Sach);
             }
         }
     }

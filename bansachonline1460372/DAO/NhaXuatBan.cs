@@ -24,11 +24,11 @@ namespace DAO
             }
         }
 
-        public static BanSachOnlineConnection.NhaXuatBan CuaSach(int id)
+        public static BanSachOnlineConnection.NhaXuatBan CuaSach(int ID_Sach)
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                return db.Query<BanSachOnlineConnection.NhaXuatBan>("select NhaXuatBan.* from NhaXuatBan, Sach where Sach.ID_NhaXuatBan = NhaXuatBan.ID_NhaXuatBan and Sach.ID_Sach = @0", id).FirstOrDefault();
+                return db.SingleOrDefault<BanSachOnlineConnection.NhaXuatBan>("select NhaXuatBan.* from NhaXuatBan, Sach where Sach.ID_NhaXuatBan = NhaXuatBan.ID_NhaXuatBan and Sach.ID_Sach = @0", ID_Sach);
             }
         }
     }

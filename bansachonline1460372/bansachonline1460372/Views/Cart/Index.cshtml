@@ -1,17 +1,4 @@
-﻿@*@model DTO.ChiTietGioHang
-
-    @{
-        ViewBag.Title = "Index";
-    }
-
-    <h2>Index gio hang</h2>
-
-    @Model.GioHang.ID_GioHang<br />
-    @Model.Sach.Ten_Sach<br />
-    @Model.GioHang.SoLuong_GioHang<br />
-    @Model.TaiKhoan.TenKhachHang_TaiKhoan<br />*@
-
-@model DTO.KimGoEun
+﻿@model DTO.KimGoEun
 
 @{
     ViewBag.Title = "Index";
@@ -21,7 +8,7 @@
     <div class="col-lg-12">
         <div class="panel panel-default">
             <div class="panel-heading">
-                Gio hang cua @Model.dsctGioHang.FirstOrDefault().TaiKhoan.TenKhachHang_TaiKhoan
+                Gio hang cua @Model.GioHang.FirstOrDefault().TaiKhoan.TenKhachHang_TaiKhoan
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
@@ -35,21 +22,21 @@
                                 <th>Chuc Nang</th>
                             </tr>
                         </thead>
-                        @foreach (var item in Model.dsctGioHang)
+                        @foreach (var item in Model.GioHang)
                         {
                             <tbody>
                                 @using (Html.BeginForm("Update", "Cart", FormMethod.Post))
                                 {
                                     <tr>
-                                        @Html.Hidden("ID_Sach", item.Sach.ID_Sach)
+                                        @Html.Hidden("ID_Sach", item.Sach.Sach.ID_Sach)
                                         @Html.AntiForgeryToken()
                                         <td>
-                                            <a href='@Url.Action("Details", "Product", new { id = item.Sach.ID_Sach })'>
-                                                <img class="img-responsive" src='@Url.Content(@item.Sach.TrangBia_Sach)' />
+                                            <a href='@Url.Action("Details", "Product", new { id = item.Sach.Sach.ID_Sach })'>
+                                                <img class="img-responsive" src='@Url.Content(@item.Sach.Sach.TrangBia_Sach)' />
                                             </a>
-                                        </td>
-                                        <td>@Html.ActionLink(@item.Sach.Ten_Sach, "Details", "Product", new { id = item.Sach.ID_Sach }, null)</td>
-                                        <td><input name="soluong" value="@item.SoLuong" type="text" class="form-control" /></td>
+                                        </td>                                        
+                                        <td>@Html.ActionLink(@item.Sach.Sach.Ten_Sach, "Details", "Product", new { id = item.Sach.Sach.ID_Sach }, null)</td>
+                                        <td><input name="soluong" value="@item.GioHang.SoLuong_GioHang" type="text" class="form-control" /></td>
                                         <td><input type="submit" value="cap nhat" class="btn btn-success" /></td>
                                     </tr>
                                 }
@@ -69,9 +56,9 @@
         @{
             decimal tong = 0;
         }
-        @foreach (var item in Model.dsctGioHang)
+        @foreach (var item in Model.GioHang)
         {
-            tong = tong + item.GioHang.SoLuong_GioHang.GetValueOrDefault() * item.Sach.Gia_Sach.GetValueOrDefault();
+            tong = tong + item.GioHang.SoLuong_GioHang.GetValueOrDefault() * item.Sach.Sach.Gia_Sach.GetValueOrDefault();
         }
         Thanh tien = @tong        
     </div>
@@ -79,7 +66,7 @@
     <div class="col-lg-6">
         @using (Html.BeginForm("CheckOut", "Cart", FormMethod.Post))
         {
-            @Html.Hidden("tong", tong)
+            @*@Html.Hidden("tong", tong)*@
             <button type="submit" class="btn btn-outline btn-success fa fa-thumbs-up">THANH TOAN</button>
         }
     </div>     

@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DonHang.cs" />
+    <Compile Include="DonHangChiTiet.cs" />
     <Compile Include="GiaoHang.cs" />
     <Compile Include="BinhLuan.cs" />
     <Compile Include="GioHang.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="TacGia.cs" />
     <Compile Include="TaiKhoan.cs" />
     <Compile Include="TheLoai.cs" />
+    <Compile Include="TinhTrang.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -60,45 +60,35 @@ namespace BUS
             return DAO.BinhLuan.CuaSach(ID_Sach, page, itemPer);
         }
 
-        public static BanSachOnlineConnection.TaiKhoan TaiKhoan(string ID_TaiKhoan)
+        public static PetaPoco.Page<BanSachOnlineConnection.Sach> TacGia(int ID_TacGia, int page, int itemPer)
         {
-            return DAO.TaiKhoan.CuaTaiKhoan(ID_TaiKhoan);
+            return DAO.Sach.CuaTacGia(ID_TacGia, page, itemPer);
         }
 
-        public static PetaPoco.Page<BanSachOnlineConnection.Sach> TacGia(int id, int page, int itemPer)
+        public static PetaPoco.Page<BanSachOnlineConnection.Sach> GiaoHang(int ID_AvailableShippingDate, int page, int itemPer)
         {
-            return DAO.Sach.CuaTacGia(id, page, itemPer);
+            return DAO.Sach.CuaGiaoHang(ID_AvailableShippingDate, page, itemPer);
         }
 
-        public static PetaPoco.Page<BanSachOnlineConnection.Sach> GiaoHang(int id, int page, int itemPer)
+        public static PetaPoco.Page<BanSachOnlineConnection.Sach> NhaXuatBan(int ID_NhaXuatBan, int page, int itemPer)
         {
-            return DAO.Sach.CuaGiaoHang(id, page, itemPer);
+            return DAO.Sach.CuaNhaXuatBan(ID_NhaXuatBan, page, itemPer);
         }
 
-        public static PetaPoco.Page<BanSachOnlineConnection.Sach> NhaXuatBan(int id, int page, int itemPer)
+        public static PetaPoco.Page<BanSachOnlineConnection.Sach> TheLoai(int ID_TheLoai, int page, int itemPer)
         {
-            return DAO.Sach.CuaNhaXuatBan(id, page, itemPer);
+            return DAO.Sach.CuaTheLoai(ID_TheLoai, page, itemPer);
         }
 
-        public static PetaPoco.Page<BanSachOnlineConnection.Sach> TheLoai(int id, int page, int itemPer)
+        public static PetaPoco.Page<BanSachOnlineConnection.Sach> Series(int ID_Series, int page, int itemPer)
         {
-            return DAO.Sach.CuaTheLoai(id, page, itemPer);
-        }
-
-        public static PetaPoco.Page<BanSachOnlineConnection.Sach> Series(int id, int page, int itemPer)
-        {
-            return DAO.Sach.CuaSeries(id, page, itemPer);
+            return DAO.Sach.CuaSeries(ID_Series, page, itemPer);
         }
 
         public static IEnumerable<BanSachOnlineConnection.GioHang> GioHang(string ID_TaiKhoan)
         {
             return DAO.GioHang.CuaTaiKhoan(ID_TaiKhoan);
-        }
-        
-        public static IEnumerable<BanSachOnlineConnection.DonHang> DonHang(decimal tong)
-        {
-            return DAO.DonHang.DanhSach(tong);
-        }
+        }  
 
         // --
         public static IEnumerable<BanSachOnlineConnection.Sach> LienQuanSeries(int ID_Sach)
@@ -114,6 +104,21 @@ namespace BUS
         public static IEnumerable<BanSachOnlineConnection.DonHang> DonHang()
         {
             return DAO.DonHang.DanhSach();
+        }
+
+        public static BanSachOnlineConnection.TaiKhoan TaiKhoan(string ID_TaiKhoan)
+        {
+            return DAO.TaiKhoan.CuaTaiKhoan(ID_TaiKhoan);
+        }
+
+        public static BanSachOnlineConnection.DonHang DonHang(int ID_DonHang)
+        {
+            return DAO.DonHang.CuaDonHang(ID_DonHang);
+        }
+
+        public static IEnumerable<BanSachOnlineConnection.DonHangChiTiet> DonHangChiTiet()
+        {
+            return DAO.DonHangChiTiet.DanhSach();
         }
     }
 }

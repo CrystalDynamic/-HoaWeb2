@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class KimGoEun
+    public class KimGoEun //danh sach co chi tiet
     {
-        public List<DTO.ChiTietGioHang> dsctGioHang { get; set; }
-
-        //public IEnumerable<BanSachOnlineConnection.GioHang> GioHang { get; set; }
-        //public IEnumerable<BanSachOnlineConnection.Sach> Sach { get; set; }  
-        //public string TenKhachHang { get; set; }      
+        public List<DTO.ChiTietGioHang> GioHang { get; set; }
+        public List<DTO.ChiTietSach> Sach { get; set; }
+        public List<DTO.ChiTietDonHang> DonHang { get; set; }
     }
 }

@@ -8,61 +8,60 @@ namespace DAO
 {
     public class DonHang
     {
-        public static void Them(int ID_Sach, string ID_TaiKhoan, int SoLuong, decimal TongTien, string Ten_Sach, string TenKhachHang)
+        public static void Them(string ID_TaiKhoan, decimal DonGia)
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                db.Execute("insert into DonHang(ID_Sach, ID_TaiKhoan, SoLuong_DonHang, TongTien_DonHang, Ten_Sach, TenKhachHang_TaiKhoan) values (@0, @1, @2, @3, @4, @5)", ID_Sach, ID_TaiKhoan, SoLuong, TongTien, Ten_Sach, TenKhachHang);
+                db.Execute("insert into DonHang(ID_TaiKhoan, DonGia_DonHang) values (@0, @1)", ID_TaiKhoan, DonGia);
             }
         }
 
-        public static IEnumerable<BanSachOnlineConnection.DonHang> DanhSach(decimal tong)
+        public static void ThemChiTiet(int ID_DonHang, int soluong, int ID_Sach)
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                GioHang.Xoa();                
-                return db.Query<BanSachOnlineConnection.DonHang>("select * from DonHang where TongTien_DonHang = @0", tong);
+                db.Execute("insert into DonHangChiTiet(ID_DonHang, ID_Sach, SoLuong_DonHangChiTiet) values (@0, @1, @2)", ID_DonHang, ID_Sach, soluong);
             }
         }
-
+        
         public static IEnumerable<BanSachOnlineConnection.DonHang> DanhSach()
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {                
-                return db.Query<BanSachOnlineConnection.DonHang>("select * from DonHang where BiXoa_DonHang = 0");
+                return db.Query<BanSachOnlineConnection.DonHang>("select * from DonHang where ID_TinhTrang != 3");
             }
         }
 
-        public static void Xoa(int id)
+        public static void Xoa(int ID_DonHang)
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                db.Execute("update DonHang set BiXoa_DonHang = 1 where ID_DonHang = @0", id);
+                db.Execute("update DonHang set BiXoa_DonHang = 1 where ID_DonHang = @0", ID_DonHang);
             }
         }
-        //public static void ThemID()
+       
+        public static BanSachOnlineConnection.DonHang CuaDonHang(int ID_DonHang)
+        {
+            using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
+            {
+                return db.FirstOrDefault<BanSachOnlineConnection.DonHang>("select * from DonHang where ID_DonHang = @0 and ID_TinhTrang != 3", ID_DonHang);
+            }
+        }
+
+        //public static void CapNhat(int ID_DonHang, int soluong, int dongia)
         //{
         //    using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
         //    {
-        //        db.Execute("update DonHang set id = id + 1 where ");
+        //        db.Execute("update DonHang set SoLuong_DonHang = @0 where ID_DonHang = @1", soluong, ID_DonHang);
+        //        db.Execute("update DonHang set TongTien_DonHang = @0 where ID_DonHang = @1", dongia, ID_DonHang);                
         //    }
         //}
 
-        public static BanSachOnlineConnection.DonHang CuaDonHang(int id)
+        public static BanSachOnlineConnection.DonHang lastRec()
         {
             using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
             {
-                return db.Query<BanSachOnlineConnection.DonHang>("select * from DonHang where ID_DonHang = @0", id).FirstOrDefault();
-            }
-        }
-
-        public static void CapNhat(int id, int soluong, int tongtien)
-        {
-            using (var db = new BanSachOnlineConnection.BanSachOnlineConnectionDB())
-            {
-                db.Execute("update DonHang set SoLuong_DonHang = @0 where ID_DonHang = @1", soluong, id);
-                db.Execute("update DonHang set TongTien_DonHang = @0 where ID_DonHang = @1", tongtien, id);
-                
+                return db.FirstOrDefault<BanSachOnlineConnection.DonHang>("select top 1 * from DonHang where ID_TinhTrang != 3 order by ID_DonHang desc");
             }
         }
     }

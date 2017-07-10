@@ -13,31 +13,32 @@ namespace BUS
             DAO.BinhLuan.Them(ID_Sach, ID_TaiKhoan, Ten_KhachHang, NoiDung);
         }
 
-        public static void LuotXem(int id)
+        public static void LuotXem(int ID_Sach)
         {
-            DAO.Sach.ThemLuotXem(id);
+            DAO.Sach.ThemLuotXem(ID_Sach);
         }
 
         public static void GioHang(int ID_Sach, string ID_TaiKhoan)
-        {
+        {            
             DAO.GioHang.Them(ID_Sach, ID_TaiKhoan, 1);
         }
 
         public static void DonHang(string ID_TaiKhoan)
         {
             decimal tong = 0;
-            var dsctgh = KimGoEun.get(ID_TaiKhoan);
-
-            foreach (var item in dsctgh.dsctGioHang)
+            var dsctGH = KimGoEun.dsctGioHang(ID_TaiKhoan).GioHang;
+            
+            foreach (var item in dsctGH)
             {
-                tong = tong + item.GioHang.SoLuong_GioHang.GetValueOrDefault() * item.Sach.Gia_Sach.GetValueOrDefault();
-                DAO.DonHang.Them(item.Sach.ID_Sach, item.TaiKhoan.ID_TaiKhoan, item.GioHang.SoLuong_GioHang.GetValueOrDefault(), tong, item.Sach.Ten_Sach, item.TaiKhoan.TenKhachHang_TaiKhoan);
+                tong = tong + item.GioHang.SoLuong_GioHang.GetValueOrDefault() * item.Sach.Sach.Gia_Sach.GetValueOrDefault();                
             }
+            DAO.DonHang.Them(ID_TaiKhoan, tong);
+            var ID_DonHang = DanhSach.DonHang().Last().ID_DonHang;
+            foreach (var item in dsctGH)
+            {
+                DAO.DonHang.ThemChiTiet(ID_DonHang, item.GioHang.SoLuong_GioHang.GetValueOrDefault(), item.GioHang.ID_Sach);
+            }
+            DAO.GioHang.Xoa();
         }
-
-        //public static void idDonHang()
-        //{
-        //    DAO.DonHang.ThemLuotXem(id);
-        //}
     }
 }
